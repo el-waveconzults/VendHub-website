@@ -9,38 +9,37 @@
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-	<!-- Header / site navigation -->
-	<header class="site-header">
-		<div class="container header-inner">
-			<a class="logo" href="./">
+ 	<!-- Header / site navigation -->
+	<header class="navbar">
+    <div class="nav-inner">
+      <!-- Logo -->
+      <a class="logo" href="./">
 				<img src="VendHub_logos/VendHub logo.png" alt="VendHub logo" />
 			</a>
 
-			<button class="nav-toggle" aria-label="Toggle navigation">
-				<img src="VendHub_icons/menu.png" alt="menu">
-			</button>
+      <!-- Hamburger toggle (mobile) -->
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
 
-			<nav class="main-nav">
-				<ul>
-					<li><a href="#">How It Works</a></li>
-					<li><a href="#">For Factories</a></li>
-					<li><a href="#">For Producers</a></li>
-					<li><a href="#">Industries</a></li>
-					<li><a href="#">Pricing</a></li>
-					<li><a href="#">Resources</a></li>
-				</ul>
-				<div class="mobile-nav-actions">
-					<button class="btn btn-outline">Login</button>
-					<button class="btn btn-primary">Sign Up Free</button>
-				</div>
-			</nav>
+      <!-- Nav links -->
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#" class="nav-link">How It Works</a>
+        <a href="#" class="nav-link has-chevron">For Factories</a>
+        <a href="#" class="nav-link has-chevron">For Producers</a>
+        <a href="#" class="nav-link has-chevron">Industries</a>
+        <a href="#" class="nav-link">Pricing</a>
+        <a href="#" class="nav-link has-chevron">Resources</a>
+      </nav>
 
-			<div class="header-actions">
-				<button class="btn btn-outline">Login</button>
-				<button class="btn btn-primary">Sign Up Free</button>
-			</div>
-		</div>
-	</header>
+      <!-- Auth buttons -->
+      <div class="nav-auth">
+        <a href="choose_accont.html" class="btn-nav-login">Log In</a>
+        <a href="create_account.html" class="btn-nav-signup">Sign Up</a>
+      </div>
+    </div>
+  </header>
+
 
 	<!-- Main page content -->
 	<main>

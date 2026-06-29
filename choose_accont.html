@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VendHub – Choose Your Account Type</title>
+  <link rel="stylesheet" href="choose_accont.css" />
+</head>
+<body>
+
+  <!-- ============================
+       NAVIGATION BAR
+  ============================= -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <!-- Logo -->
+       <a class="logo" href="./">
+				<img src="VendHub_logos/VendHub logo.png" alt="VendHub logo" />
+			</a>
+
+      <!-- Hamburger (mobile) -->
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- Nav links -->
+      <nav class="nav-links" role="navigation" aria-label="Main navigation">
+        <a href="#" class="nav-link">How It Works</a>
+        <a href="#" class="nav-link dropdown-trigger">For Factories <span class="chevron">&#8964;</span></a>
+        <a href="#" class="nav-link dropdown-trigger">For Producers <span class="chevron">&#8964;</span></a>
+        <a href="#" class="nav-link dropdown-trigger">Industries <span class="chevron">&#8964;</span></a>
+        <a href="#" class="nav-link">Pricing</a>
+        <a href="#" class="nav-link dropdown-trigger">Resources <span class="chevron">&#8964;</span></a>
+      </nav>
+
+      <!-- Auth buttons -->
+      <div class="nav-auth">
+        <a href="choose_accont.html" class="btn-login">Log In</a>
+        <a href="create_account.html" class="btn-signup">Sign Up Free</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================
+       MAIN CONTENT
+  ============================= -->
+  <main class="main-content">
+
+    <!-- Step indicator -->
+    <div class="step-badge" aria-label="Step 1 of 3">STEP 1 OF 3</div>
+
+    <!-- Page heading -->
+    <h1 class="page-heading">Choose your account type</h1>
+    <p class="page-subtext">Select the option that best describes you to get started.</p>
+
+    <!-- ============================
+         ACCOUNT TYPE CARDS
+    ============================= -->
+    <section class="cards-container" aria-label="Account type selection">
+
+      <!-- Card 1: Factory Owner -->
+      <article class="account-card" tabindex="0" aria-label="Factory Owner account type">
+        <div class="card-illustration factory-illustration" aria-hidden="true">
+          <!-- Factory icon badge -->
+          <div class="card-icon-badge">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="14" width="24" height="12" rx="1.5" fill="var(--primary)" opacity="0.15"/>
+              <rect x="4" y="14" width="20" height="12" rx="1" fill="var(--primary)" opacity="0.3"/>
+              <rect x="6" y="10" width="4" height="4" rx="0.5" fill="var(--primary)"/>
+              <rect x="12" y="8" width="4" height="6" rx="0.5" fill="var(--primary)"/>
+              <rect x="18" y="10" width="4" height="4" rx="0.5" fill="var(--primary)"/>
+              <!-- Chimneys -->
+              <rect x="8" y="4" width="3" height="7" rx="1" fill="var(--primary)"/>
+              <rect x="17" y="4" width="3" height="7" rx="1" fill="var(--primary)"/>
+              <!-- Doors / windows -->
+              <rect x="7" y="18" width="4" height="5" rx="0.5" fill="white"/>
+              <rect x="17" y="18" width="4" height="5" rx="0.5" fill="white"/>
+              <rect x="12" y="18" width="4" height="3" rx="0.5" fill="white"/>
+            </svg>
+          </div>
+          <!-- CSS factory building illustration -->
+          <div class="illustration-scene factory-scene" aria-hidden="true">
+            <div class="factory-building">
+              <div class="factory-chimney left"></div>
+              <div class="factory-chimney right"></div>
+              <div class="factory-body">
+                <div class="factory-windows">
+                  <div class="factory-window"></div>
+                  <div class="factory-window"></div>
+                  <div class="factory-window"></div>
+                </div>
+                <div class="factory-door"></div>
+              </div>
+            </div>
+            <div class="factory-machine"></div>
+          </div>
+        </div>
+
+        <div class="card-body">
+          <h2 class="card-title">I'm a Factory Owner</h2>
+          <p class="card-desc">I own factory space or equipment and want to list it on VendHub to earn more.</p>
+
+          <ul class="card-features" role="list">
+            <li>
+              <span class="check-icon primary-check" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 18 18"><circle cx="9" cy="9" r="9" fill="var(--primary)" opacity="0.12"/><path d="M5.5 9.5L7.5 11.5L12.5 6.5" stroke="var(--primary)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              List your equipment and capacity
+            </li>
+            <li>
+              <span class="check-icon primary-check" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 18 18"><circle cx="9" cy="9" r="9" fill="var(--primary)" opacity="0.12"/><path d="M5.5 9.5L7.5 11.5L12.5 6.5" stroke="var(--primary)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              Get booked by verified businesses
+            </li>
+            <li>
+              <span class="check-icon primary-check" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 18 18"><circle cx="9" cy="9" r="9" fill="var(--primary)" opacity="0.12"/><path d="M5.5 9.5L7.5 11.5L12.5 6.5" stroke="var(--primary)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              Increase machine utilization
+            </li>
+            <li>
+              <span class="check-icon primary-check" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 18 18"><circle cx="9" cy="9" r="9" fill="var(--primary)" opacity="0.12"/><path d="M5.5 9.5L7.5 11.5L12.5 6.5" stroke="var(--primary)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              Grow your revenue
+            </li>
+          </ul>
+
+          <a href="#" class="btn-card btn-factory" role="button" aria-label="Continue as Factory Owner">
+            Continue as Factory Owner <span class="arrow" aria-hidden="true">&#8594;</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- Card 2: Producer / Brand -->
+      <article class="account-card" tabindex="0" aria-label="Producer or Brand account type">
+        <div class="card-illustration producer-illustration" aria-hidden="true">
+          <!-- Shopping bag icon badge -->
+          <div class="card-icon-badge producer-badge">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 10H20L18 22H10L8 10Z" fill="var(--secondary)" opacity="0.2"/>
+              <path d="M8 10H20L18 22H10L8 10Z" stroke="var(--secondary)" stroke-width="1.5" fill="none"/>
+              <path d="M11 10C11 8.34 12.34 7 14 7C15.66 7 17 8.34 17 10" stroke="var(--secondary)" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="14" cy="15" r="1.5" fill="var(--secondary)"/>
+            </svg>
+          </div>
+          <!-- CSS boxes / products illustration -->
+          <div class="illustration-scene producer-scene" aria-hidden="true">
+            <div class="box-stack">
+              <div class="box box-large"></div>
+              <div class="box box-medium"></div>
+              <div class="box box-small"></div>
+            </div>
+            <div class="product-items">
+              <div class="product-bottle green"></div>
+              <div class="product-jar"></div>
+              <div class="product-pouch"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-body">
+          <h2 class="card-title">I'm a Producer / Brand</h2>
+          <p class="card-desc">I need a factory or equipment to produce my products.</p>
+
+          <ul class="card-features" role="list">
+            <li>
+              <span class="check-icon secondary-check" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 18 18"><circle cx="9" cy="9" r="9" fill="var(--secondary)" opacity="0.12"/><path d="M5.5 9.5L7.5 11.5L12.5 6.5" stroke="var(--secondary)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              Find trusted factories
+            </li>
+            <li>
+              <span class="check-icon secondary-check" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 18 18"><circle cx="9" cy="9" r="9" fill="var(--secondary)" opacity="0.12"/><path d="M5.5 9.5L7.5 11.5L12.5 6.5" stroke="var(--secondary)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              Compare capacity and pricing
+            </li>
+            <li>
+              <span class="check-icon secondary-check" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 18 18"><circle cx="9" cy="9" r="9" fill="var(--secondary)" opacity="0.12"/><path d="M5.5 9.5L7.5 11.5L12.5 6.5" stroke="var(--secondary)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              Request quotes and book
+            </li>
+            <li>
+              <span class="check-icon secondary-check" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 18 18"><circle cx="9" cy="9" r="9" fill="var(--secondary)" opacity="0.12"/><path d="M5.5 9.5L7.5 11.5L12.5 6.5" stroke="var(--secondary)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              Produce with confidence
+            </li>
+          </ul>
+
+          <a href="#" class="btn-card btn-producer" role="button" aria-label="Continue as Producer">
+            Continue as Producer <span class="arrow" aria-hidden="true">&#8594;</span>
+          </a>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- ============================
+         LEARN MORE LINK
+    ============================= -->
+    <p class="learn-more-text">
+      Not sure which one to choose?&nbsp;
+      <a href="#" class="learn-more-link">Learn more about account types &#8594;</a>
+    </p>
+
+    <!-- ============================
+         PROGRESS TRACKER
+    ============================= -->
+    <nav class="progress-tracker" aria-label="Registration progress">
+      <!-- Step 1 (active) -->
+       <a href="choose_accont.html">
+      <div class="progress-step active" aria-current="step">
+        <div class="step-circle active-circle">1</div>
+        <span class="step-label active-label">Choose Account Type</span>
+      </div> </a>
+
+      <!-- Connector line -->
+      <div class="progress-line" aria-hidden="true"></div>
+
+      <!-- Step 2 -->
+       <a href="create_account.html">
+      <div class="progress-step">
+        <div class="step-circle">2</div>
+        <span class="step-label">Create Account</span>
+      </div> </a>
+
+      <!-- Connector line -->
+      <div class="progress-line" aria-hidden="true"></div>
+
+      <!-- Step 3 -->
+       <a href="profile_success.html">
+      <div class="progress-step">
+        <div class="step-circle">3</div>
+        <span class="step-label">Complete Profile</span>
+      </div> </a>
+    </nav>
+
+  </main>
+
+  <!-- Mobile menu toggle script -->
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const navAuth = document.querySelector('.nav-auth');
+
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      navLinks.classList.toggle('open');
+      navAuth.classList.toggle('open');
+      toggle.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>

@@ -53,18 +53,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Mobile navigation toggle behavior
   const toggle = document.querySelector(".nav-toggle");
-  const nav = document.querySelector(".main-nav");
-  if (toggle && nav) {
+  const navLinks = document.querySelector(".nav-links");
+  const navAuth = document.querySelector(".nav-auth");
+
+  if (toggle && navLinks && navAuth) {
+    const closeMenu = () => {
+      toggle.classList.remove("open");
+      navLinks.classList.remove("open");
+      navAuth.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+    };
+
     toggle.addEventListener("click", () => {
-      const isOpen = nav.classList.toggle("open");
+      const isOpen = toggle.classList.toggle("open");
+      navLinks.classList.toggle("open", isOpen);
+      navAuth.classList.toggle("open", isOpen);
       toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
     });
 
-    nav.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        nav.classList.remove("open");
-        toggle.setAttribute("aria-expanded", "false");
-      });
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeMenu);
+    });
+
+    navAuth.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeMenu);
     });
   }
   // Logo marquee animation controls
