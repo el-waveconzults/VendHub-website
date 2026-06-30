@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VendHub | Find Factories</title>
+<link rel="stylesheet" href="find_factories.css" />
+</head>
+<body>
+
+  <!-- Mobile sidebar overlay -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <!-- Mobile filters overlay (right panel) -->
+  <div class="filters-overlay" id="filtersOverlay"></div>
+
+  <div class="app-shell">
+
+    <!-- ============ SIDEBAR ============ -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <div class="brand">
+          <!-- Logo -->
+        <a class="logo" href="./">
+          <img src="VendHub_logos/VendHub logo.png" alt="VendHub logo" />
+        </a>
+        </div>
+        <button class="icon-btn sidebar-close" id="sidebarClose" aria-label="Close menu">✕</button>
+      </div>
+
+      <button class="user-card" type="button">
+        <img class="avatar" src="https://i.pravatar.cc/80?img=12" alt="" />
+        <span class="user-meta">
+          <span class="user-name">Tosin Adeyemi</span>
+          <span class="user-role">Producer / Brand</span>
+        </span>
+        <span class="chev" aria-hidden="true">⌄</span>
+      </button>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-item" href="dashboard.html">
+          <span class="nav-icon" aria-hidden="true">▦</span> Dashboard
+        </a>
+        <a class="nav-item active" href="find_factories.html">
+          <span class="nav-icon" aria-hidden="true">⌕</span> Find Factories
+        </a>
+        <a class="nav-item" href="my_requests.html">
+          <span class="nav-icon" aria-hidden="true">▤</span> My Requests
+        </a>
+        <a class="nav-item" href="#">
+          <span class="nav-icon" aria-hidden="true">▥</span> Bookings
+        </a>
+        <a class="nav-item" href="#">
+          <span class="nav-icon" aria-hidden="true">⟢</span> Production Tracking
+        </a>
+        <a class="nav-item" href="#">
+          <span class="nav-icon" aria-hidden="true">✉</span> Messages
+          <span class="nav-badge">8</span>
+        </a>
+        <a class="nav-item" href="#">
+          <span class="nav-icon" aria-hidden="true">₦</span> Payments
+        </a>
+        <a class="nav-item" href="#">
+          <span class="nav-icon" aria-hidden="true">★</span> Favorites
+        </a>
+        <a class="nav-item" href="#">
+          <span class="nav-icon" aria-hidden="true">✎</span> Reviews
+        </a>
+        <a class="nav-item" href="#">
+          <span class="nav-icon" aria-hidden="true">▢</span> Documents
+        </a>
+        <a class="nav-item" href="#">
+          <span class="nav-icon" aria-hidden="true">⚙</span> Settings
+        </a>
+      </nav>
+
+      <div class="sidebar-cards">
+        <div class="promo-card">
+          <span class="promo-icon" aria-hidden="true">📋</span>
+          <h4>Need a factory for your next production?</h4>
+          <p>Post your requirement and receive quotes from verified factories.</p>
+          <button class="btn btn-outline btn-block" type="button">
+            <span aria-hidden="true">＋</span> Post a Request
+          </button>
+        </div>
+
+        <div class="help-card">
+          <span class="help-icon" aria-hidden="true">🎧</span>
+          <h4>Need Help?</h4>
+          <p>We're here to assist you</p>
+          <a href="#" class="help-link">Contact Support</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ============ MAIN ============ -->
+    <div class="main">
+
+      <!-- Topbar -->
+      <header class="topbar">
+        <button class="icon-btn sidebar-toggle" id="sidebarToggle" aria-label="Open menu">☰</button>
+
+        <div class="search-bar">
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input type="search" placeholder="Search for factories, equipment or services..." aria-label="Search" />
+        </div>
+
+        <div class="topbar-actions">
+          <button class="icon-btn" aria-label="Messages">
+            <span aria-hidden="true">💬</span>
+            <span class="dot dot-red">3</span>
+          </button>
+          <button class="icon-btn" aria-label="Notifications">
+            <span aria-hidden="true">🔔</span>
+            <span class="dot dot-red">7</span>
+          </button>
+          <button class="btn btn-primary">
+            <span aria-hidden="true">＋</span> Post a Request
+          </button>
+        </div>
+      </header>
+
+      <!-- Content -->
+      <main class="content">
+
+        <!-- Page heading -->
+        <section class="page-head">
+          <h1>Find Factories</h1>
+          <p>Connect with verified factories that match your production needs.</p>
+        </section>
+
+        <!-- Search + filter row -->
+        <section class="search-panel">
+          <div class="search-fields">
+            <div class="field field-search">
+              <label for="searchInput">Search</label>
+              <div class="input-with-icon">
+                <input id="searchInput" type="text" placeholder="Search equipment, machines or services..." />
+                <span class="field-icon" aria-hidden="true">⌕</span>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="locationInput">Location</label>
+              <div class="input-with-icon">
+                <span class="field-icon field-icon-left" aria-hidden="true">📍</span>
+                <select id="locationInput">
+                  <option>Lagos, Nigeria</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="industryInput">Industry</label>
+              <select id="industryInput">
+                <option>Food &amp; Beverages</option>
+              </select>
+            </div>
+
+            <button class="btn btn-primary btn-search-main">Search</button>
+          </div>
+
+          <div class="filter-toolbar">
+            <button class="filter-chip filter-chip-active" id="mobileFiltersBtn">
+              <span aria-hidden="true">☰</span> All Filters
+            </button>
+            <button class="filter-chip">Equipment <span aria-hidden="true">⌄</span></button>
+            <button class="filter-chip">Capacity <span aria-hidden="true">⌄</span></button>
+            <button class="filter-chip">Price Range <span aria-hidden="true">⌄</span></button>
+            <button class="filter-chip">Certification <span aria-hidden="true">⌄</span></button>
+            <button class="filter-chip">Availability <span aria-hidden="true">⌄</span></button>
+            <button class="filter-chip filter-chip-ghost">
+              <span aria-hidden="true">▤</span> More Filters
+            </button>
+          </div>
+        </section>
+
+        <!-- Results header -->
+        <div class="results-head">
+          <span class="results-count">312 factories found</span>
+          <div class="sort-control">
+            <label for="sortSelect">Sort by:</label>
+            <select id="sortSelect">
+              <option>Relevance</option>
+              <option>Rating</option>
+              <option>Price: Low to High</option>
+              <option>Price: High to Low</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Two column: results + refine panel -->
+        <div class="results-layout">
+
+          <!-- Factory listing -->
+          <div class="factory-list">
+
+            <article class="factory-card">
+              <div class="factory-media">
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=300&h=300&fit=crop" alt="ABC Foods Factory production floor" />
+                <button class="fav-btn" aria-label="Save factory">♡</button>
+                <span class="media-badge">✓ Verified</span>
+              </div>
+
+              <div class="factory-body">
+                <h3 class="factory-name">Automated Robotics Factory <span class="verified-pill">✓ Verified</span></h3>
+                <div class="factory-meta">
+                  <span class="rating">★ 4.8 <span class="muted">(124 reviews)</span></span>
+                  <span class="meta-sep">•</span>
+                  <span class="muted">📍 Lagos, Nigeria</span>
+                </div>
+                <p class="factory-desc">Industrial food production facility with modern equipment and strict quality control standards.</p>
+                <div class="factory-tags">
+                  <span class="tag">Oven</span>
+                  <span class="tag">Mixer</span>
+                  <span class="tag">Packaging Machine</span>
+                  <span class="tag-more">+3 more</span>
+                </div>
+              </div>
+
+              <div class="factory-side">
+                <span class="side-label">Equipment Available</span>
+                <div class="equip-icons">
+                  <span class="equip-icon" aria-hidden="true">🛠️</span>
+                  <span class="equip-icon" aria-hidden="true">🧴</span>
+                  <span class="equip-icon" aria-hidden="true">📦</span>
+                  <span class="equip-more">+6</span>
+                </div>
+
+                <div class="capacity-grid">
+                  <div>
+                    <span class="side-label">Min. Capacity</span>
+                    <strong>5,000 units/day</strong>
+                  </div>
+                  <div>
+                    <span class="side-label">Max Capacity</span>
+                    <strong>5,000 units/day</strong>
+                  </div>
+                </div>
+
+                <div class="price-line">
+                  <span class="side-label">From</span>
+                  <strong class="price">₦15,000 <span class="muted">/hour</span></strong>
+                </div>
+
+                <button class="btn btn-primary btn-block">View Profile</button>
+              </div>
+            </article>
+
+            <article class="factory-card">
+              <div class="factory-media">
+                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=300&h=300&fit=crop" alt="NutriFoods Ltd production floor" />
+                <button class="fav-btn" aria-label="Save factory">♡</button>
+                <span class="media-badge">✓ Verified</span>
+              </div>
+
+              <div class="factory-body">
+                <h3 class="factory-name">NutriFoods Ltd <span class="verified-pill">✓ Verified</span></h3>
+                <div class="factory-meta">
+                  <span class="rating">★ 4.7 <span class="muted">(98 reviews)</span></span>
+                  <span class="meta-sep">•</span>
+                  <span class="muted">📍 Ibadan, Oyo State</span>
+                </div>
+                <p class="factory-desc">Specialized in beverages and liquid products with advanced bottling and packaging lines.</p>
+                <div class="factory-tags">
+                  <span class="tag">Bottling</span>
+                  <span class="tag">Pasteurizer</span>
+                  <span class="tag">Packaging</span>
+                  <span class="tag-more">+2 more</span>
+                </div>
+              </div>
+
+              <div class="factory-side">
+                <span class="side-label">Equipment Available</span>
+                <div class="equip-icons">
+                  <span class="equip-icon" aria-hidden="true">🛠️</span>
+                  <span class="equip-icon" aria-hidden="true">🧴</span>
+                  <span class="equip-icon" aria-hidden="true">📦</span>
+                  <span class="equip-icon" aria-hidden="true">🧪</span>
+                </div>
+
+                <div class="capacity-grid">
+                  <div>
+                    <span class="side-label">Min. Capacity</span>
+                    <strong>8,000 units/day</strong>
+                  </div>
+                  <div>
+                    <span class="side-label">Max Capacity</span>
+                    <strong>3,000 liters/day</strong>
+                  </div>
+                </div>
+
+                <div class="price-line">
+                  <span class="side-label">From</span>
+                  <strong class="price">₦12,000 <span class="muted">/hour</span></strong>
+                </div>
+
+                <button class="btn btn-primary btn-block">View Profile</button>
+              </div>
+            </article>
+
+            <article class="factory-card">
+              <div class="factory-media">
+                <img src="https://images.unsplash.com/photo-1565514020179-026b92b2d70b?w=300&h=300&fit=crop" alt="Golden Crust Industries warehouse" />
+                <button class="fav-btn" aria-label="Save factory">♡</button>
+                <span class="media-badge">✓ Verified</span>
+              </div>
+
+              <div class="factory-body">
+                <h3 class="factory-name">Golden Crust Industries <span class="verified-pill">✓ Verified</span></h3>
+                <div class="factory-meta">
+                  <span class="rating">★ 4.6 <span class="muted">(76 reviews)</span></span>
+                  <span class="meta-sep">•</span>
+                  <span class="muted">📍 Abeokuta, Ogun State</span>
+                </div>
+                <p class="factory-desc">Bakery and confectionery production with high-capacity ovens and mixers.</p>
+                <div class="factory-tags">
+                  <span class="tag">Industrial Oven</span>
+                  <span class="tag">Dough Mixer</span>
+                  <span class="tag">Slicer</span>
+                  <span class="tag-more">+2 more</span>
+                </div>
+              </div>
+
+              <div class="factory-side">
+                <span class="side-label">Equipment Available</span>
+                <div class="equip-icons">
+                  <span class="equip-icon" aria-hidden="true">🛠️</span>
+                  <span class="equip-icon" aria-hidden="true">🍞</span>
+                  <span class="equip-icon" aria-hidden="true">🔪</span>
+                  <span class="equip-more">+5</span>
+                </div>
+
+                <div class="capacity-grid">
+                  <div>
+                    <span class="side-label">Min. Capacity</span>
+                    <strong>10,000 units/day</strong>
+                  </div>
+                  <div>
+                    <span class="side-label">Max Capacity</span>
+                    <strong>10,000 units/day</strong>
+                  </div>
+                </div>
+
+                <div class="price-line">
+                  <span class="side-label">From</span>
+                  <strong class="price">₦18,000 <span class="muted">/hour</span></strong>
+                </div>
+
+                <button class="btn btn-primary btn-block">View Profile</button>
+              </div>
+            </article>
+
+            <article class="factory-card">
+              <div class="factory-media">
+                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=300&h=300&fit=crop" alt="PackRight Solutions facility" />
+                <button class="fav-btn" aria-label="Save factory">♡</button>
+                <span class="media-badge">✓ Verified</span>
+              </div>
+
+              <div class="factory-body">
+                <h3 class="factory-name">PackRight Solutions <span class="verified-pill">✓ Verified</span></h3>
+                <div class="factory-meta">
+                  <span class="rating">★ 4.5 <span class="muted">(63 reviews)</span></span>
+                  <span class="meta-sep">•</span>
+                  <span class="muted">📍 Port Harcourt, Rivers State</span>
+                </div>
+                <p class="factory-desc">End-to-end packaging solutions for food, snacks and consumer products.</p>
+                <div class="factory-tags">
+                  <span class="tag">Packaging Machine</span>
+                  <span class="tag">Sealer</span>
+                  <span class="tag">Labeler</span>
+                  <span class="tag-more">+2 more</span>
+                </div>
+              </div>
+
+              <div class="factory-side">
+                <span class="side-label">Equipment Available</span>
+                <div class="equip-icons">
+                  <span class="equip-icon" aria-hidden="true">📦</span>
+                  <span class="equip-icon" aria-hidden="true">🏷️</span>
+                  <span class="equip-icon" aria-hidden="true">🛠️</span>
+                  <span class="equip-more">+3</span>
+                </div>
+
+                <div class="capacity-grid">
+                  <div>
+                    <span class="side-label">Min. Capacity</span>
+                    <strong>7,000 units/day</strong>
+                  </div>
+                  <div>
+                    <span class="side-label">Max Capacity</span>
+                    <strong>7,000 units/day</strong>
+                  </div>
+                </div>
+
+                <div class="price-line">
+                  <span class="side-label">From</span>
+                  <strong class="price">₦10,000 <span class="muted">/hour</span></strong>
+                </div>
+
+                <button class="btn btn-primary btn-block">View Profile</button>
+              </div>
+            </article>
+
+            <!-- Pagination -->
+            <nav class="pagination" aria-label="Pagination">
+              <button class="page-btn" aria-label="Previous page">‹</button>
+              <button class="page-btn page-btn-active">1</button>
+              <button class="page-btn">2</button>
+              <button class="page-btn">3</button>
+              <span class="page-ellipsis">…</span>
+              <button class="page-btn">16</button>
+              <button class="page-btn" aria-label="Next page">›</button>
+            </nav>
+          </div>
+
+          <!-- Refine Your Search panel -->
+          <aside class="refine-panel" id="refinePanel">
+            <div class="refine-head">
+              <h2>Refine Your Search</h2>
+              <button class="clear-all" type="button">Clear all</button>
+              <button class="icon-btn filters-close" id="filtersClose" aria-label="Close filters">✕</button>
+            </div>
+
+            <div class="refine-group">
+              <label for="refineLocation">Location</label>
+              <input id="refineLocation" type="text" placeholder="Enter city or state" />
+              <div class="chip-row">
+                <span class="chip">Lagos, Nigeria <button aria-label="Remove Lagos, Nigeria">✕</button></span>
+              </div>
+            </div>
+
+            <div class="refine-group">
+              <label for="refineIndustry">Industry</label>
+              <select id="refineIndustry">
+                <option>Food &amp; Beverages</option>
+              </select>
+            </div>
+
+            <div class="refine-group">
+              <label for="refineEquipment">Equipment / Services</label>
+              <select id="refineEquipment">
+                <option>Select equipment</option>
+              </select>
+              <div class="chip-row">
+                <span class="chip">Oven <button aria-label="Remove Oven">✕</button></span>
+                <span class="chip">Mixer <button aria-label="Remove Mixer">✕</button></span>
+                <span class="chip">Packaging Machine <button aria-label="Remove Packaging Machine">✕</button></span>
+              </div>
+            </div>
+
+            <div class="refine-group">
+              <label>Minimum Capacity</label>
+              <div class="capacity-inputs">
+                <input type="text" placeholder="From" aria-label="Minimum capacity from" />
+                <input type="text" placeholder="To" aria-label="Minimum capacity to" />
+                <select aria-label="Capacity unit">
+                  <option>Units/day</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="refine-group">
+              <label>Price Range (Hourly)</label>
+              <div class="price-inputs">
+                <input type="text" placeholder="Min Price" aria-label="Minimum price" />
+                <input type="text" placeholder="Max Price" aria-label="Maximum price" />
+              </div>
+            </div>
+
+            <div class="refine-group">
+              <label>Certifications</label>
+              <ul class="checklist">
+                <li><label><input type="checkbox" /> HACCP Certified</label></li>
+                <li><label><input type="checkbox" /> ISO 22000</label></li>
+                <li><label><input type="checkbox" /> NAFDAC Approved</label></li>
+                <li><label><input type="checkbox" /> SON Certified</label></li>
+                <li><label><input type="checkbox" /> Organic Certified</label></li>
+              </ul>
+              <a href="#" class="view-more-link">View more</a>
+            </div>
+
+            <div class="refine-group">
+              <label>Availability</label>
+              <ul class="radiolist">
+                <li><label><input type="radio" name="availability" checked /> Available Now</label></li>
+                <li>
+                  <label><input type="radio" name="availability" /> Available on Date</label>
+                  <input type="text" class="date-input" placeholder="Available on Date" aria-label="Available on date" />
+                </li>
+              </ul>
+            </div>
+
+            <button class="btn btn-outline btn-block btn-apply">Apply Filters</button>
+          </aside>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    // Sidebar toggle (mobile)
+    const sidebar = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const sidebarClose = document.getElementById('sidebarClose');
+
+    function openSidebar(){ sidebar.classList.add('open'); sidebarOverlay.classList.add('show'); }
+    function closeSidebar(){ sidebar.classList.remove('open'); sidebarOverlay.classList.remove('show'); }
+    sidebarToggle.addEventListener('click', openSidebar);
+    sidebarClose.addEventListener('click', closeSidebar);
+    sidebarOverlay.addEventListener('click', closeSidebar);
+
+    // Refine filters panel toggle (mobile/tablet)
+    const refinePanel = document.getElementById('refinePanel');
+    const filtersOverlay = document.getElementById('filtersOverlay');
+    const mobileFiltersBtn = document.getElementById('mobileFiltersBtn');
+    const filtersClose = document.getElementById('filtersClose');
+
+    function openFilters(){ refinePanel.classList.add('open'); filtersOverlay.classList.add('show'); }
+    function closeFilters(){ refinePanel.classList.remove('open'); filtersOverlay.classList.remove('show'); }
+    mobileFiltersBtn.addEventListener('click', openFilters);
+    filtersClose.addEventListener('click', closeFilters);
+    filtersOverlay.addEventListener('click', closeFilters);
+  </script>
+</body>
+</html>

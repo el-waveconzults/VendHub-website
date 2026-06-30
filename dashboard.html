@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VendHub | Dashboard</title>
+<link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+
+  <!-- Mobile sidebar overlay -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="app-shell">
+
+    <!-- ============ SIDEBAR ============ -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <div class="brand">
+          <!-- Logo -->
+        <a class="logo" href="./">
+          <img src="VendHub_logos/VendHub logo.png" alt="VendHub logo" />
+        </a>
+        </div>
+        <button class="icon-btn sidebar-close" id="sidebarClose" aria-label="Close menu">✕</button>
+      </div>
+
+      <button class="user-card" type="button">
+        <img class="avatar" src="https://i.pravatar.cc/80?img=12" alt="" />
+        <span class="user-meta">
+          <span class="user-name">Tosin Adeyemi</span>
+          <span class="user-role">Producer / Brand</span>
+        </span>
+        <span class="chev" aria-hidden="true">⌄</span>
+      </button>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-item active" href="dashboard.html">
+          <span class="nav-icon" aria-hidden="true">▦</span> Dashboard
+        </a>
+        <a class="nav-item" href="find_factories.html">
+          <span class="nav-icon" aria-hidden="true">⌕</span> Find Factories
+        </a>
+        <a class="nav-item" href="my_requests.html">
+          <span class="nav-icon" aria-hidden="true">▤</span> My Requests
+        </a>
+        <a class="nav-item" href="#">
+          <span class="nav-icon" aria-hidden="true">▥</span> Bookings
+        </a>
+        <a class="nav-item" href="#">
+          <span class="nav-icon" aria-hidden="true">⟢</span> Production Tracking
+        </a>
+        <a class="nav-item" href="#">
+          <span class="nav-icon" aria-hidden="true">✉</span> Messages
+          <span class="nav-badge">8</span>
+        </a>
+        <a class="nav-item" href="#">
+          <span class="nav-icon" aria-hidden="true">₦</span> Payments
+        </a>
+        <a class="nav-item" href="#">
+          <span class="nav-icon" aria-hidden="true">★</span> Favorites
+        </a>
+        <a class="nav-item" href="#">
+          <span class="nav-icon" aria-hidden="true">✎</span> Reviews
+        </a>
+        <a class="nav-item" href="#">
+          <span class="nav-icon" aria-hidden="true">▢</span> Documents
+        </a>
+        <a class="nav-item" href="#">
+          <span class="nav-icon" aria-hidden="true">⚙</span> Settings
+        </a>
+      </nav>
+
+      <div class="sidebar-cards">
+        <div class="promo-card">
+          <span class="promo-icon" aria-hidden="true">📋</span>
+          <h4>Need a trusted factory?</h4>
+          <p>Post your requirement and get quotes from verified factories.</p>
+          <button class="btn btn-outline btn-block" type="button">
+            <span aria-hidden="true">＋</span> Post a Request
+          </button>
+        </div>
+
+        <div class="help-card">
+          <span class="help-icon" aria-hidden="true">🎧</span>
+          <h4>Need Help?</h4>
+          <p>We're here to assist you</p>
+          <a href="#" class="help-link">Contact Support</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ============ MAIN ============ -->
+    <div class="main">
+
+      <!-- Topbar -->
+      <header class="topbar">
+        <button class="icon-btn sidebar-toggle" id="sidebarToggle" aria-label="Open menu">☰</button>
+
+        <div class="search-bar">
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input type="search" placeholder="Search for factories, equipment or services..." aria-label="Search" />
+        </div>
+
+        <div class="topbar-actions">
+          <button class="icon-btn" aria-label="Messages">
+            <span aria-hidden="true">💬</span>
+            <span class="dot dot-purple">8</span>
+          </button>
+          <button class="icon-btn" aria-label="Notifications">
+            <span aria-hidden="true">🔔</span>
+            <span class="dot dot-red">3</span>
+          </button>
+          <button class="btn btn-primary">
+            <span aria-hidden="true">＋</span> Post a Request
+          </button>
+        </div>
+      </header>
+
+      <!-- Content -->
+      <main class="content">
+
+        <!-- Welcome -->
+        <section class="welcome">
+          <h1>Welcome back, Tosin! 👋</h1>
+          <p>Here's what's happening with your production today.</p>
+        </section>
+
+        <!-- Stat cards -->
+        <section class="stats-grid" aria-label="Account statistics">
+          <div class="stat-card">
+            <div class="stat-icon stat-icon-purple" aria-hidden="true">⌕</div>
+            <div class="stat-body">
+              <span class="stat-label">Active Requests</span>
+              <div class="stat-row">
+                <span class="stat-value">5</span>
+                <a href="#" class="stat-link">View all</a>
+              </div>
+              <span class="stat-trend trend-up">↑ 2 new this week</span>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon stat-icon-green" aria-hidden="true">⎘</div>
+            <div class="stat-body">
+              <span class="stat-label">Ongoing Productions</span>
+              <div class="stat-row">
+                <span class="stat-value">3</span>
+                <a href="#" class="stat-link">View all</a>
+              </div>
+              <span class="stat-trend trend-up">↑ 1 from last week</span>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon stat-icon-indigo" aria-hidden="true">✓</div>
+            <div class="stat-body">
+              <span class="stat-label">Completed Orders</span>
+              <div class="stat-row">
+                <span class="stat-value">12</span>
+                <a href="#" class="stat-link">View all</a>
+              </div>
+              <span class="stat-trend trend-up">↑ 20% this month</span>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon stat-icon-amber" aria-hidden="true">₦</div>
+            <div class="stat-body">
+              <span class="stat-label">Total Spend (This Month)</span>
+              <div class="stat-row">
+                <span class="stat-value">₦850,000</span>
+              </div>
+              <a href="#" class="stat-link">View analytics</a>
+              <span class="stat-trend trend-down">↓ 8% vs last month</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Two column layout -->
+        <div class="grid-2col">
+
+          <!-- LEFT COLUMN -->
+          <div class="col-left">
+
+            <!-- Find Factories -->
+            <section class="card find-factories">
+              <div class="card-head">
+                <div>
+                  <h2>Find Factories</h2>
+                  <p class="card-sub">Search and connect with verified factories that match your needs.</p>
+                </div>
+                <a href="#" class="link-arrow">View all factories →</a>
+              </div>
+
+              <div class="filters-row">
+                <select aria-label="Location"><option>Location</option></select>
+                <select aria-label="Industry"><option>Industry</option></select>
+                <select aria-label="Equipment"><option>Equipment</option></select>
+                <select aria-label="Capacity"><option>Capacity</option></select>
+                <select aria-label="More Filters"><option>More Filters</option></select>
+                <button class="btn btn-primary btn-search">Search</button>
+              </div>
+
+              <div class="popular-searches">
+                <span class="popular-label">Popular Searches:</span>
+                <button class="tag">Bread Production</button>
+                <button class="tag">Beverage Bottling</button>
+                <button class="tag">Packaging</button>
+                <button class="tag">Cosmetics</button>
+                <button class="tag">Snacks</button>
+              </div>
+            </section>
+
+            <!-- Recent Production Requests -->
+            <section class="card">
+              <div class="card-head">
+                <h2>Recent Production Requests</h2>
+                <a href="#" class="link-arrow">View all</a>
+              </div>
+
+              <ul class="request-list">
+                <li class="request-item">
+                  <img class="thumb" src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=100&h=100&fit=crop" alt="" />
+                  <div class="request-info">
+                    <span class="request-title">SweetBake Ltd</span>
+                    <span class="request-meta">Industrial Oven • 3 Days • 20,000 units of Bread</span>
+                  </div>
+                  <div class="request-side">
+                    <span class="badge badge-amber">Pending</span>
+                    <span class="request-date">May 24, 2024</span>
+                  </div>
+                </li>
+
+                <li class="request-item">
+                  <img class="thumb" src="https://images.unsplash.com/photo-1597393353415-b3730f3719fe?w=100&h=100&fit=crop" alt="" />
+                  <div class="request-info">
+                    <span class="request-title">NutriFoods</span>
+                    <span class="request-meta">Mixer Machine • 2 Days • 10,000 liters of Juice</span>
+                  </div>
+                  <div class="request-side">
+                    <span class="badge badge-blue">Quoted</span>
+                    <span class="request-date">May 21, 2024</span>
+                  </div>
+                </li>
+
+                <li class="request-item">
+                  <img class="thumb" src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=100&h=100&fit=crop" alt="" />
+                  <div class="request-info">
+                    <span class="request-title">Automated Robotics Factory</span>
+                    <span class="request-meta">Packaging Machine • 1 Day • 5,000 units of Snacks</span>
+                  </div>
+                  <div class="request-side">
+                    <span class="badge badge-green">Approved</span>
+                    <span class="request-date">May 18, 2024</span>
+                  </div>
+                </li>
+
+                <li class="request-item">
+                  <img class="thumb" src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=100&h=100&fit=crop" alt="" />
+                  <div class="request-info">
+                    <span class="request-title">Golden Crust Industries</span>
+                    <span class="request-meta">Oven + Mixer • 5 Days • 50,000 units of Dough</span>
+                  </div>
+                  <div class="request-side">
+                    <span class="badge badge-violet">Completed</span>
+                    <span class="request-date">May 10, 2024</span>
+                  </div>
+                </li>
+              </ul>
+
+              <a href="#" class="view-all-link">View all requests →</a>
+            </section>
+          </div>
+
+          <!-- MIDDLE COLUMN -->
+          <div class="col-mid">
+
+            <!-- Production Progress -->
+            <section class="card">
+              <div class="card-head">
+                <h2>Production Progress</h2>
+                <a href="#" class="link-arrow">View all</a>
+              </div>
+
+              <ul class="progress-list">
+                <li class="progress-item">
+                  <img class="thumb thumb-sm" src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=80&h=80&fit=crop" alt="" />
+                  <div class="progress-body">
+                    <div class="progress-top">
+                      <span class="progress-title">Tasty Bites</span>
+                      <span class="progress-pct">60%</span>
+                    </div>
+                    <span class="progress-dates">May 20 – May 25</span>
+                    <div class="progress-track"><div class="progress-fill" style="width:60%"></div></div>
+                  </div>
+                </li>
+
+                <li class="progress-item">
+                  <img class="thumb thumb-sm" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=80&h=80&fit=crop" alt="" />
+                  <div class="progress-body">
+                    <div class="progress-top">
+                      <span class="progress-title">Quick Snacks</span>
+                      <span class="progress-pct">80%</span>
+                    </div>
+                    <span class="progress-dates">May 18 – May 22</span>
+                    <div class="progress-track"><div class="progress-fill" style="width:80%"></div></div>
+                  </div>
+                </li>
+
+                <li class="progress-item">
+                  <img class="thumb thumb-sm" src="https://images.unsplash.com/photo-1465911817134-2ba5413d6ff0?w=80&h=80&fit=crop" alt="" />
+                  <div class="progress-body">
+                    <div class="progress-top">
+                      <span class="progress-title">Golden Crust</span>
+                      <span class="progress-pct">100%</span>
+                    </div>
+                    <span class="progress-dates">May 7 – May 15</span>
+                    <div class="progress-track"><div class="progress-fill progress-complete" style="width:100%"></div></div>
+                  </div>
+                </li>
+              </ul>
+            </section>
+
+            <!-- Spending Overview -->
+            <section class="card">
+              <div class="card-head">
+                <h2>Spending Overview</h2>
+                <select class="period-select" aria-label="Period">
+                  <option>This Month</option>
+                </select>
+              </div>
+
+              <div class="spending-body">
+                <div class="donut-wrap" aria-hidden="true">
+                  <svg viewBox="0 0 120 120" class="donut">
+                    <circle cx="60" cy="60" r="48" fill="none" stroke="#E9E7F7" stroke-width="18"></circle>
+                    <!-- Food Production 450k / 850k = 52.9% -->
+                    <circle cx="60" cy="60" r="48" fill="none" stroke="#5B4FE9" stroke-width="18"
+                      stroke-dasharray="159.6 141.5" stroke-dashoffset="0" stroke-linecap="round"></circle>
+                    <!-- Beverage 250k = 29.4% -->
+                    <circle cx="60" cy="60" r="48" fill="none" stroke="#F5A623" stroke-width="18"
+                      stroke-dasharray="88.7 212.4" stroke-dashoffset="-159.6" stroke-linecap="round"></circle>
+                    <!-- Packaging 100k = 11.8% -->
+                    <circle cx="60" cy="60" r="48" fill="none" stroke="#2BB673" stroke-width="18"
+                      stroke-dasharray="35.5 265.6" stroke-dashoffset="-248.3" stroke-linecap="round"></circle>
+                    <!-- Others 50k = 5.9% -->
+                    <circle cx="60" cy="60" r="48" fill="none" stroke="#9B8CF2" stroke-width="18"
+                      stroke-dasharray="17.7 283.4" stroke-dashoffset="-283.8" stroke-linecap="round"></circle>
+                  </svg>
+                </div>
+
+                <ul class="legend">
+                  <li><span class="dot-legend" style="background:#5B4FE9"></span>Food Production <strong>₦450,000</strong></li>
+                  <li><span class="dot-legend" style="background:#F5A623"></span>Beverage <strong>₦250,000</strong></li>
+                  <li><span class="dot-legend" style="background:#2BB673"></span>Packaging <strong>₦100,000</strong></li>
+                  <li><span class="dot-legend" style="background:#9B8CF2"></span>Others <strong>₦50,000</strong></li>
+                </ul>
+              </div>
+
+              <div class="spending-total">
+                <span>Total Spend</span>
+                <strong>₦850,000</strong>
+              </div>
+            </section>
+          </div>
+
+          <!-- RIGHT COLUMN -->
+          <div class="col-right">
+
+            <!-- Upcoming Deliveries -->
+            <section class="card">
+              <div class="card-head">
+                <h2>Upcoming Deliveries</h2>
+                <a href="#" class="link-arrow">View all</a>
+              </div>
+
+              <ul class="delivery-list">
+                <li class="delivery-item">
+                  <span class="delivery-icon" aria-hidden="true">📦</span>
+                  <div class="delivery-info">
+                    <span class="delivery-title">SweetBake Ltd</span>
+                    <span class="delivery-meta">20,000 Bread</span>
+                  </div>
+                  <span class="delivery-date">May 25, 2024</span>
+                </li>
+                <li class="delivery-item">
+                  <span class="delivery-icon" aria-hidden="true">📦</span>
+                  <div class="delivery-info">
+                    <span class="delivery-title">NutriFoods</span>
+                    <span class="delivery-meta">10,000 Juice Bottles</span>
+                  </div>
+                  <span class="delivery-date">May 23, 2024</span>
+                </li>
+                <li class="delivery-item">
+                  <span class="delivery-icon" aria-hidden="true">📦</span>
+                  <div class="delivery-info">
+                    <span class="delivery-title">ABC Foods Factory</span>
+                    <span class="delivery-meta">5,000 Snack Packs</span>
+                  </div>
+                  <span class="delivery-date">May 20, 2024</span>
+                </li>
+              </ul>
+            </section>
+
+            <!-- Recent Messages -->
+            <section class="card">
+              <div class="card-head">
+                <h2>Recent Messages</h2>
+                <a href="#" class="link-arrow">View all</a>
+              </div>
+
+              <ul class="message-list">
+                <li class="message-item">
+                  <img class="avatar avatar-sm" src="https://i.pravatar.cc/64?img=33" alt="" />
+                  <div class="message-info">
+                    <span class="message-title">SweetBake Ltd</span>
+                    <span class="message-preview">Hello! We have received your request...</span>
+                  </div>
+                  <div class="message-side">
+                    <span class="message-time">10:30 AM</span>
+                    <span class="message-badge">2</span>
+                  </div>
+                </li>
+                <li class="message-item">
+                  <img class="avatar avatar-sm" src="https://i.pravatar.cc/64?img=47" alt="" />
+                  <div class="message-info">
+                    <span class="message-title">NutriFoods</span>
+                    <span class="message-preview">Can you send the recipe details?</span>
+                  </div>
+                  <div class="message-side">
+                    <span class="message-time">Yesterday</span>
+                    <span class="message-badge">1</span>
+                  </div>
+                </li>
+                <li class="message-item">
+                  <img class="avatar avatar-sm" src="https://i.pravatar.cc/64?img=15" alt="" />
+                  <div class="message-info">
+                    <span class="message-title">ABC Foods Factory</span>
+                    <span class="message-preview">We've sent you the quotation.</span>
+                  </div>
+                  <div class="message-side">
+                    <span class="message-time">May 20</span>
+                  </div>
+                </li>
+                <li class="message-item">
+                  <img class="avatar avatar-sm" src="https://i.pravatar.cc/64?img=51" alt="" />
+                  <div class="message-info">
+                    <span class="message-title">Golden Crust Industries</span>
+                    <span class="message-preview">Production will be completed on time.</span>
+                  </div>
+                  <div class="message-side">
+                    <span class="message-time">May 18</span>
+                  </div>
+                </li>
+              </ul>
+            </section>
+
+            <!-- Quick Actions -->
+            <section class="card">
+              <h2>Quick Actions</h2>
+              <div class="quick-actions">
+                <button class="qa-btn qa-purple">
+                  <span aria-hidden="true">⌕</span> Find Factories
+                </button>
+                <button class="qa-btn qa-green">
+                  <span aria-hidden="true">＋</span> Post a Request
+                </button>
+                <button class="qa-btn qa-light">
+                  <span aria-hidden="true">▥</span> My Bookings
+                </button>
+                <button class="qa-btn qa-light">
+                  <span aria-hidden="true">💬</span> Messages
+                </button>
+              </div>
+            </section>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    // Minimal interaction: toggle sidebar on mobile
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebarOverlay');
+    const openBtn = document.getElementById('sidebarToggle');
+    const closeBtn = document.getElementById('sidebarClose');
+
+    function openSidebar(){
+      sidebar.classList.add('open');
+      overlay.classList.add('show');
+    }
+    function closeSidebar(){
+      sidebar.classList.remove('open');
+      overlay.classList.remove('show');
+    }
+    openBtn.addEventListener('click', openSidebar);
+    closeBtn.addEventListener('click', closeSidebar);
+    overlay.addEventListener('click', closeSidebar);
+  </script>
+</body>
+</html>
