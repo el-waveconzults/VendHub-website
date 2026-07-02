@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VendHub | Production Tracking</title>
+<link rel="stylesheet" href="production_tracking.css" />
+</head>
+<body>
+
+  <!-- Mobile sidebar overlay -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="app-shell">
+
+    <!-- ============ SIDEBAR ============ -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <!-- Logo -->
+        <a class="logo" href="./">
+          <img src="VendHub_logos/VendHub logo.png" alt="VendHub logo" />
+        </a>
+        <button class="icon-btn sidebar-close" id="sidebarClose" aria-label="Close menu">✕</button>
+      </div>
+
+      <a href="settings.html">
+      <button class="user-card" type="button">
+        <img class="avatar" src="VendHub_svg/avatar.jpeg" alt="" />
+        <span class="user-meta">
+          <span class="user-name">Tosin Adeyemi</span>
+          <span class="user-role">Producer / Brand</span>
+        </span>
+        <span class="chev" aria-hidden="true">⌄</span>
+      </button> </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-item" href="dashboard.html">
+          <span class="nav-icon" aria-hidden="true">▦</span> Dashboard
+        </a>
+        <a class="nav-item" href="find_factories.html">
+          <span class="nav-icon" aria-hidden="true">⌕</span> Find Factories
+        </a>
+        <a class="nav-item" href="my_requests.html">
+          <span class="nav-icon" aria-hidden="true">▤</span> My Requests
+          <span class="nav-badge">2</span>
+        </a>
+        <a class="nav-item" href="bookings.html">
+          <span class="nav-icon" aria-hidden="true">▥</span> Bookings
+        </a>
+        <a class="nav-item active" href="production_tracking.html">
+          <span class="nav-icon" aria-hidden="true">⟢</span> Production Tracking
+        </a>
+        <a class="nav-item" href="messages.html">
+          <span class="nav-icon" aria-hidden="true">✉</span> Messages
+          <span class="nav-badge">6</span>
+        </a>
+        <a class="nav-item" href="payments.html">
+          <span class="nav-icon" aria-hidden="true">₦</span> Payments
+        </a>
+        <a class="nav-item" href="#">
+          <span class="nav-icon" aria-hidden="true">★</span> Favorites
+        </a>
+        <a class="nav-item" href="factory_profile.html">
+          <span class="nav-icon" aria-hidden="true">✎</span> Reviews
+        </a>
+        <a class="nav-item" href="#">
+          <span class="nav-icon" aria-hidden="true">▢</span> Documents
+        </a>
+        <a class="nav-item" href="settings.html">
+          <span class="nav-icon" aria-hidden="true">⚙</span> Settings
+        </a>
+      </nav>
+
+      <div class="sidebar-cards">
+        <div class="promo-card">
+          <span class="promo-icon" aria-hidden="true">📦</span>
+          <h4>Need help tracking your order?</h4>
+          <p>Our support team is here to help you track your production.</p>
+          <button class="btn btn-outline btn-block" type="button">Contact Support</button>
+        </div>
+
+        <div class="help-card">
+          <span class="help-icon" aria-hidden="true">🎧</span>
+          <h4>How it works</h4>
+          <p>Learn how production tracking works and stay updated in real time.</p>
+          <a href="#" class="help-link">View Guide →</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ============ MAIN ============ -->
+    <div class="main">
+
+      <!-- Topbar -->
+      <header class="topbar">
+        <button class="icon-btn sidebar-toggle" id="sidebarToggle" aria-label="Open menu">☰</button>
+
+        <div class="search-bar">
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input type="search" placeholder="Search for factories, equipment or services..." aria-label="Search" />
+        </div>
+
+        <div class="topbar-actions">
+          <button class="icon-btn" aria-label="Messages">
+            <span aria-hidden="true">💬</span>
+            <span class="dot dot-purple">3</span>
+          </button>
+          <button class="icon-btn" aria-label="Notifications">
+            <span aria-hidden="true">🔔</span>
+            <span class="dot dot-red">6</span>
+          </button>
+          <button class="btn btn-primary">
+            <span aria-hidden="true">＋</span> Post a Request
+          </button>
+        </div>
+      </header>
+
+      <!-- Content -->
+      <main class="content">
+
+        <!-- Page heading -->
+        <section class="page-head">
+          <h1>Production Tracking</h1>
+          <p>Track the real-time progress of your production orders.</p>
+          <a href="my_requests.html" class="back-link"><span aria-hidden="true">←</span> Back to My Requests</a>
+        </section>
+
+        <!-- Two column layout: main tracking + info panel -->
+        <div class="tracking-layout">
+
+          <!-- LEFT / MAIN COLUMN -->
+          <div class="tracking-main">
+
+            <!-- Production overview card -->
+            <section class="card overview-card">
+              <div class="overview-head">
+                <img class="overview-thumb" src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=160&h=160&fit=crop" alt="Bread Production" />
+
+                <div class="overview-info">
+                  <div class="overview-title-row">
+                    <h2>Bread Production</h2>
+                    <span class="badge badge-amber">In Production</span>
+                  </div>
+                  <span class="overview-sub">REQ-2405-001 &nbsp;·&nbsp; ABC Foods Factory</span>
+
+                  <div class="overview-meta">
+                    <span class="meta-item"><span aria-hidden="true">▤</span> Quantity <strong>20,000 units</strong></span>
+                    <span class="meta-item"><span aria-hidden="true">📅</span> Order Date <strong>May 24, 2024</strong></span>
+                    <span class="meta-item"><span aria-hidden="true">🕓</span> Expected Completion <strong>May 31, 2024</strong></span>
+                    <span class="meta-item"><span aria-hidden="true">⏱️</span> Lead Time <strong>7 days</strong></span>
+                  </div>
+                </div>
+
+                <button class="btn btn-outline btn-details">
+                  <span aria-hidden="true">▤</span> View Request Details
+                </button>
+              </div>
+
+              <!-- Workflow tracker -->
+              <ol class="workflow">
+                <li class="workflow-step workflow-done">
+                  <span class="workflow-icon" aria-hidden="true">✓</span>
+                  <span class="workflow-label">Order Confirmed</span>
+                  <span class="workflow-date">May 24, 2024</span>
+                </li>
+                <li class="workflow-step workflow-done">
+                  <span class="workflow-icon" aria-hidden="true">✓</span>
+                  <span class="workflow-label">Raw Materials</span>
+                  <span class="workflow-date">May 24, 2024</span>
+                </li>
+                <li class="workflow-step workflow-current">
+                  <span class="workflow-icon" aria-hidden="true">◉</span>
+                  <span class="workflow-label">Production</span>
+                  <span class="workflow-date">May 26, 2024</span>
+                </li>
+                <li class="workflow-step">
+                  <span class="workflow-icon" aria-hidden="true">▤</span>
+                  <span class="workflow-label">Quality Check</span>
+                  <span class="workflow-date">&nbsp;</span>
+                </li>
+                <li class="workflow-step">
+                  <span class="workflow-icon" aria-hidden="true">▥</span>
+                  <span class="workflow-label">Packaging</span>
+                  <span class="workflow-date">&nbsp;</span>
+                </li>
+                <li class="workflow-step">
+                  <span class="workflow-icon" aria-hidden="true">▦</span>
+                  <span class="workflow-label">Ready for Delivery</span>
+                  <span class="workflow-date">&nbsp;</span>
+                </li>
+                <li class="workflow-step">
+                  <span class="workflow-icon" aria-hidden="true">✓</span>
+                  <span class="workflow-label">Delivered</span>
+                  <span class="workflow-date">&nbsp;</span>
+                </li>
+              </ol>
+            </section>
+
+            <!-- Production Progress -->
+            <section class="card">
+              <h2 class="section-title">Production Progress</h2>
+
+              <div class="progress-row">
+                <span class="progress-caption">Overall Progress</span>
+                <div class="progress-track">
+                  <div class="progress-fill" style="width:60%"></div>
+                </div>
+                <span class="progress-pct">60%</span>
+              </div>
+
+              <span class="stage-caption">Current Stage</span>
+              <div class="stage-card">
+                <span class="stage-icon" aria-hidden="true">▤</span>
+                <div class="stage-body">
+                  <div class="stage-top">
+                    <span class="stage-title">Production</span>
+                    <span class="badge badge-blue">In progress</span>
+                  </div>
+                  <p class="stage-desc">The factory is currently producing your goods.</p>
+                </div>
+                <div class="stage-side">
+                  <span class="stage-date">May 26, 2024</span>
+                  <span class="stage-time">Started at 09:30 AM</span>
+                </div>
+              </div>
+
+              <!-- Production Timeline -->
+              <h3 class="subsection-title">Production Timeline</h3>
+              <ol class="timeline">
+                <li class="timeline-item timeline-done">
+                  <span class="timeline-dot" aria-hidden="true">✓</span>
+                  <div class="timeline-body">
+                    <div class="timeline-top">
+                      <span class="timeline-title">Order Confirmed</span>
+                      <span class="timeline-date">May 24, 2024<br /><span class="timeline-time">10:15 AM</span></span>
+                    </div>
+                    <p class="timeline-desc">Your request has been confirmed by ABC Foods Factory.</p>
+                  </div>
+                </li>
+                <li class="timeline-item timeline-done">
+                  <span class="timeline-dot" aria-hidden="true">✓</span>
+                  <div class="timeline-body">
+                    <div class="timeline-top">
+                      <span class="timeline-title">Raw Materials Received</span>
+                      <span class="timeline-date">May 24, 2024<br /><span class="timeline-time">02:45 PM</span></span>
+                    </div>
+                    <p class="timeline-desc">Raw materials have been received and inspected.</p>
+                  </div>
+                </li>
+                <li class="timeline-item timeline-current">
+                  <span class="timeline-dot" aria-hidden="true">●</span>
+                  <div class="timeline-body">
+                    <div class="timeline-top">
+                      <span class="timeline-title">Production Started</span>
+                      <span class="timeline-date">May 26, 2024<br /><span class="timeline-time">09:30 AM</span></span>
+                    </div>
+                    <p class="timeline-desc">Production has started at the factory.</p>
+                  </div>
+                </li>
+                <li class="timeline-item">
+                  <span class="timeline-dot" aria-hidden="true">○</span>
+                  <div class="timeline-body">
+                    <div class="timeline-top">
+                      <span class="timeline-title">Quality Check</span>
+                    </div>
+                    <p class="timeline-desc">Goods will be inspected for quality assurance.</p>
+                  </div>
+                </li>
+                <li class="timeline-item">
+                  <span class="timeline-dot" aria-hidden="true">○</span>
+                  <div class="timeline-body">
+                    <div class="timeline-top">
+                      <span class="timeline-title">Packaging</span>
+                    </div>
+                    <p class="timeline-desc">Products will be packaged and prepared for delivery.</p>
+                  </div>
+                </li>
+                <li class="timeline-item">
+                  <span class="timeline-dot" aria-hidden="true">○</span>
+                  <div class="timeline-body">
+                    <div class="timeline-top">
+                      <span class="timeline-title">Ready for Delivery</span>
+                    </div>
+                    <p class="timeline-desc">Your order will be ready for pickup or delivery.</p>
+                  </div>
+                </li>
+                <li class="timeline-item">
+                  <span class="timeline-dot" aria-hidden="true">○</span>
+                  <div class="timeline-body">
+                    <div class="timeline-top">
+                      <span class="timeline-title">Delivered</span>
+                    </div>
+                    <p class="timeline-desc">Your order will be delivered to the confirmed location.</p>
+                  </div>
+                </li>
+              </ol>
+            </section>
+
+            <!-- Production Updates -->
+            <section class="card">
+              <h2 class="section-title">Production Updates</h2>
+
+              <ul class="updates-list">
+                <li class="update-item">
+                  <img class="update-thumb" src="https://images.unsplash.com/photo-1556909114-44e3e70034e2?w=120&h=120&fit=crop" alt="" />
+                  <div class="update-body">
+                    <span class="update-title">Production started</span>
+                    <p class="update-desc">The production has started as scheduled.</p>
+                    <span class="update-date">May 26, 2024 · 09:30 AM</span>
+                  </div>
+                </li>
+                <li class="update-item">
+                  <img class="update-thumb" src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=120&h=120&fit=crop" alt="" />
+                  <div class="update-body">
+                    <span class="update-title">Raw materials received</span>
+                    <p class="update-desc">All raw materials have been received and quality checked.</p>
+                    <span class="update-date">May 24, 2024 · 02:45 PM</span>
+                  </div>
+                </li>
+                <li class="update-item">
+                  <img class="update-thumb" src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=120&h=120&fit=crop" alt="" />
+                  <div class="update-body">
+                    <span class="update-title">Order confirmed</span>
+                    <p class="update-desc">Your production order has been confirmed by ABC Foods Factory.</p>
+                    <span class="update-date">May 24, 2024 · 10:15 AM</span>
+                  </div>
+                </li>
+              </ul>
+
+              <button class="btn btn-outline btn-block">View All Updates</button>
+            </section>
+          </div>
+
+          <!-- RIGHT / INFO PANEL -->
+          <aside class="tracking-aside">
+
+            <!-- Factory Information -->
+            <section class="card">
+              <h2 class="section-title">Factory Information</h2>
+
+              <div class="factory-row">
+                <div class="factory-logo" aria-hidden="true">ABC<br />FOODS</div>
+                <div class="factory-info">
+                  <span class="factory-name">ABC Foods Factory <span class="verified-pill">✓ Verified</span></span>
+                  <span class="factory-rating">★ 4.8 <span class="muted">(124 reviews)</span></span>
+                  <span class="factory-location"><span aria-hidden="true">📍</span> Lagos, Nigeria</span>
+                </div>
+              </div>
+
+              <button class="btn btn-outline btn-block">View Factory Profile</button>
+              <button class="btn btn-primary btn-block">Send Message</button>
+            </section>
+
+            <!-- Request Summary -->
+            <section class="card">
+              <h2 class="section-title">Request Summary</h2>
+              <ul class="summary-list">
+                <li><span>Product</span><strong>Bread</strong></li>
+                <li><span>Quantity</span><strong>20,000 units</strong></li>
+                <li><span>Unit</span><strong>Loaves</strong></li>
+                <li><span>Category</span><strong>Food &amp; Beverages</strong></li>
+                <li><span>Lead Time</span><strong>7 days</strong></li>
+                <li><span>Started On</span><strong>May 24, 2024</strong></li>
+                <li><span>Expected Completion</span><strong>May 31, 2024</strong></li>
+              </ul>
+            </section>
+
+            <!-- Delivery Information -->
+            <section class="card">
+              <h2 class="section-title">Delivery Information</h2>
+              <ul class="summary-list">
+                <li><span>Delivery Method</span><strong>Factory Delivery</strong></li>
+                <li class="summary-address">
+                  <span>Delivery Address</span>
+                  <strong>12 Industrial Way, Agege Industrial Estate, Lagos, Nigeria</strong>
+                </li>
+              </ul>
+            </section>
+
+            <!-- Support -->
+            <section class="card support-card">
+              <span class="support-icon" aria-hidden="true">🎧</span>
+              <div>
+                <h2 class="section-title">Need help?</h2>
+                <p class="support-desc">If you have any questions, our support team is ready to assist you.</p>
+                <button class="btn btn-outline btn-block">Contact Support</button>
+              </div>
+            </section>
+          </aside>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    // Sidebar toggle (mobile)
+    const sidebar = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const sidebarClose = document.getElementById('sidebarClose');
+
+    function openSidebar(){ sidebar.classList.add('open'); sidebarOverlay.classList.add('show'); }
+    function closeSidebar(){ sidebar.classList.remove('open'); sidebarOverlay.classList.remove('show'); }
+    sidebarToggle.addEventListener('click', openSidebar);
+    sidebarClose.addEventListener('click', closeSidebar);
+    sidebarOverlay.addEventListener('click', closeSidebar);
+  </script>
+</body>
+</html>

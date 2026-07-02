@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VendHub | Payments / Invoices</title>
+    <link rel="stylesheet" href="payments.css" />
+  </head>
+  <body>
+    <!-- Mobile sidebar overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <div class="app-shell">
+      <!-- ============ SIDEBAR ============ -->
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-top">
+          <!-- Logo -->
+          <a class="logo" href="./">
+            <img src="VendHub_logos/VendHub logo.png" alt="VendHub logo" />
+          </a>
+          <button
+            class="icon-btn sidebar-close"
+            id="sidebarClose"
+            aria-label="Close menu">
+            ✕
+          </button>
+        </div>
+
+        <a href="settings.html">
+      <button class="user-card" type="button">
+        <img class="avatar" src="VendHub_svg/avatar.jpeg" alt="" />
+        <span class="user-meta">
+          <span class="user-name">Tosin Adeyemi</span>
+          <span class="user-role">Producer / Brand</span>
+        </span>
+        <span class="chev" aria-hidden="true">⌄</span>
+      </button> </a>
+
+        <nav class="nav" aria-label="Primary">
+          <a class="nav-item" href="dashboard.html">
+            <span class="nav-icon" aria-hidden="true">▦</span> Dashboard
+          </a>
+          <a class="nav-item" href="find_factories.html">
+            <span class="nav-icon" aria-hidden="true">⌕</span> Find Factories
+          </a>
+          <a class="nav-item" href="my_requests.html">
+            <span class="nav-icon" aria-hidden="true">▤</span> My Requests
+            <span class="nav-badge">2</span>
+          </a>
+          <a class="nav-item" href="bookings.html">
+            <span class="nav-icon" aria-hidden="true">▥</span> Bookings
+          </a>
+          <a class="nav-item" href="production_tracking.html">
+            <span class="nav-icon" aria-hidden="true">⟢</span> Production
+            Tracking
+          </a>
+          <a class="nav-item" href="messages.html">
+            <span class="nav-icon" aria-hidden="true">✉</span> Messages
+            <span class="nav-badge">8</span>
+          </a>
+          <a class="nav-item active" href="payments.html">
+            <span class="nav-icon" aria-hidden="true">₦</span> Payments
+          </a>
+          <a class="nav-item" href="#">
+            <span class="nav-icon" aria-hidden="true">★</span> Favorites
+          </a>
+          <a class="nav-item" href="factory_profile.html">
+            <span class="nav-icon" aria-hidden="true">✎</span> Reviews
+          </a>
+          <a class="nav-item" href="#">
+            <span class="nav-icon" aria-hidden="true">▢</span> Documents
+          </a>
+          <a class="nav-item" href="settings.html">
+            <span class="nav-icon" aria-hidden="true">⚙</span> Settings
+          </a>
+        </nav>
+
+        <div class="sidebar-cards">
+          <div class="promo-card">
+            <span class="promo-icon" aria-hidden="true">🛡️</span>
+            <h4>Secure Payments</h4>
+            <p>
+              Your payments are safe and protected with industry standard
+              security.
+            </p>
+            <button class="btn btn-outline btn-block" type="button">
+              Learn More
+            </button>
+          </div>
+
+          <div class="help-card">
+            <span class="help-icon" aria-hidden="true">🎧</span>
+            <h4>Need Help?</h4>
+            <p>Our support team is here to assist you.</p>
+            <a href="#" class="help-link">Contact Support →</a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- ============ MAIN ============ -->
+      <div class="main">
+        <!-- Topbar -->
+        <header class="topbar">
+          <button
+            class="icon-btn sidebar-toggle"
+            id="sidebarToggle"
+            aria-label="Open menu">
+            ☰
+          </button>
+
+          <div class="search-bar">
+            <span class="search-icon" aria-hidden="true">⌕</span>
+            <input
+              type="search"
+              placeholder="Search for factories, equipment or services..."
+              aria-label="Search" />
+          </div>
+
+          <div class="topbar-actions">
+            <button class="icon-btn" aria-label="Messages">
+              <span aria-hidden="true">💬</span>
+              <span class="dot dot-purple">3</span>
+            </button>
+            <button class="icon-btn" aria-label="Notifications">
+              <span aria-hidden="true">🔔</span>
+              <span class="dot dot-red">6</span>
+            </button>
+            <button class="btn btn-primary">
+              <span aria-hidden="true">＋</span> Post a Request
+            </button>
+          </div>
+        </header>
+
+        <!-- Content -->
+        <main class="content">
+          <!-- Page heading -->
+          <section class="page-head">
+            <h1>Payments / Invoices</h1>
+            <p>Track your payments, invoices and transaction history.</p>
+          </section>
+
+          <!-- Two column layout: main + right info panel -->
+          <div class="payments-layout">
+            <!-- LEFT / MAIN COLUMN -->
+            <div class="payments-main">
+              <!-- Stat cards -->
+              <section class="stats-grid" aria-label="Payment statistics">
+                <div class="stat-card">
+                  <div class="stat-icon stat-icon-purple" aria-hidden="true">
+                    📄
+                  </div>
+                  <div class="stat-body">
+                    <span class="stat-label">Total Invoices</span>
+                    <span class="stat-value">18</span>
+                    <a href="#" class="stat-link">View all →</a>
+                  </div>
+                </div>
+
+                <div class="stat-card">
+                  <div class="stat-icon stat-icon-green" aria-hidden="true">
+                    👛
+                  </div>
+                  <div class="stat-body">
+                    <span class="stat-label">Total Paid</span>
+                    <span class="stat-value">₦2,450,000</span>
+                    <a href="#" class="stat-link">View all →</a>
+                  </div>
+                </div>
+
+                <div class="stat-card">
+                  <div class="stat-icon stat-icon-amber" aria-hidden="true">
+                    🕓
+                  </div>
+                  <div class="stat-body">
+                    <span class="stat-label">Pending Payment</span>
+                    <span class="stat-value">₦650,000</span>
+                    <a href="#" class="stat-link">View all →</a>
+                  </div>
+                </div>
+
+                <div class="stat-card">
+                  <div class="stat-icon stat-icon-blue" aria-hidden="true">
+                    💳
+                  </div>
+                  <div class="stat-body">
+                    <span class="stat-label">Total Spent</span>
+                    <span class="stat-value">₦3,100,000</span>
+                    <a href="#" class="stat-link">View analytics →</a>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Tabs -->
+              <nav class="tabs" aria-label="Invoice status tabs">
+                <button class="tab tab-active">All Invoices</button>
+                <button class="tab">Paid</button>
+                <button class="tab">Pending</button>
+                <button class="tab">Overdue</button>
+                <button class="tab">Draft</button>
+              </nav>
+
+              <!-- Filters -->
+              <section class="filters-bar">
+                <div class="input-with-icon search-input">
+                  <input
+                    type="text"
+                    placeholder="Search invoices..."
+                    aria-label="Search invoices" />
+                  <span class="field-icon" aria-hidden="true">⌕</span>
+                </div>
+                <button class="filter-btn">
+                  <span aria-hidden="true">▤</span> Filter
+                </button>
+                <button class="filter-btn date-btn">
+                  <span>May 1 – May 31, 2024</span>
+                  <span aria-hidden="true">📅</span>
+                </button>
+                <button class="btn btn-ghost export-btn">
+                  <span aria-hidden="true">⭳</span> Export
+                </button>
+              </section>
+
+              <!-- Invoice table -->
+              <section class="table-card">
+                <div class="table-scroll">
+                  <table class="invoices-table">
+                    <colgroup>
+                      <col class="col-invoice" />
+                      <col class="col-factory" />
+                      <col class="col-amount" />
+                      <col class="col-status" />
+                      <col class="col-date" />
+                      <col class="col-actions" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>Invoice / Request</th>
+                        <th>Factory</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        <th>Due Date</th>
+                        <th>Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="cell-invoice">
+                          <span
+                            class="inv-icon inv-icon-purple"
+                            aria-hidden="true"
+                            >▤</span
+                          >
+                          <div>
+                            <span class="inv-number">INV-2405-001</span>
+                            <span class="inv-request">Bread Production</span>
+                            <span class="inv-id">REQ-2405-001</span>
+                          </div>
+                        </td>
+                        <td class="cell-factory">
+                          <span
+                            class="factory-logo factory-logo-green"
+                            aria-hidden="true"
+                            >ABC<br />FOODS</span
+                          >
+                          <div>
+                            <span class="factory-name">ABC Foods Factory</span>
+                            <span class="factory-location">Lagos, Nigeria</span>
+                          </div>
+                        </td>
+                        <td class="cell-amount">
+                          <span class="amount">₦800,000</span>
+                          <span class="amount-sub">20,000 units</span>
+                        </td>
+                        <td class="cell-status">
+                          <span class="badge badge-green">Paid</span>
+                          <span class="status-sub">Paid on May 25</span>
+                        </td>
+                        <td class="cell-date">
+                          <span class="due-date">May 31, 2024</span>
+                          <span class="due-sub">Paid on May 25</span>
+                        </td>
+                        <td class="cell-actions">
+                          <button class="icon-btn-sm" aria-label="View invoice">
+                            👁
+                          </button>
+                          <button class="kebab-btn" aria-label="More options">
+                            ⋮
+                          </button>
+                        </td>
+                      </tr>
+
+                      <tr class="row-active">
+                        <td class="cell-invoice">
+                          <span
+                            class="inv-icon inv-icon-amber"
+                            aria-hidden="true"
+                            >▤</span
+                          >
+                          <div>
+                            <span class="inv-number">INV-2405-002</span>
+                            <span class="inv-request">Juice Bottles</span>
+                            <span class="inv-id">REQ-2405-002</span>
+                          </div>
+                        </td>
+                        <td class="cell-factory">
+                          <span
+                            class="factory-logo factory-logo-teal"
+                            aria-hidden="true"
+                            >NF</span
+                          >
+                          <div>
+                            <span class="factory-name">NutriFoods Ltd</span>
+                            <span class="factory-location"
+                              >Ibadan, Nigeria</span
+                            >
+                          </div>
+                        </td>
+                        <td class="cell-amount">
+                          <span class="amount">₦450,000</span>
+                          <span class="amount-sub">10,000 units</span>
+                        </td>
+                        <td class="cell-status">
+                          <span class="badge badge-amber">Pending</span>
+                          <span class="status-sub">Awaiting payment</span>
+                        </td>
+                        <td class="cell-date">
+                          <span class="due-date">May 30, 2024</span>
+                          <span class="due-sub due-warning">2 days left</span>
+                        </td>
+                        <td class="cell-actions">
+                          <button class="icon-btn-sm" aria-label="View invoice">
+                            👁
+                          </button>
+                          <button class="kebab-btn" aria-label="More options">
+                            ⋮
+                          </button>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td class="cell-invoice">
+                          <span
+                            class="inv-icon inv-icon-purple"
+                            aria-hidden="true"
+                            >▤</span
+                          >
+                          <div>
+                            <span class="inv-number">INV-2405-003</span>
+                            <span class="inv-request">Cosmetic Cream</span>
+                            <span class="inv-id">REQ-2405-005</span>
+                          </div>
+                        </td>
+                        <td class="cell-factory">
+                          <span
+                            class="factory-logo factory-logo-blue"
+                            aria-hidden="true"
+                            >🧴</span
+                          >
+                          <div>
+                            <span class="factory-name">BeautyChem Labs</span>
+                            <span class="factory-location"
+                              >Port Harcourt, Nigeria</span
+                            >
+                          </div>
+                        </td>
+                        <td class="cell-amount">
+                          <span class="amount">₦250,000</span>
+                          <span class="amount-sub">2,000 units</span>
+                        </td>
+                        <td class="cell-status">
+                          <span class="badge badge-grey">Draft</span>
+                          <span class="status-sub">Not sent</span>
+                        </td>
+                        <td class="cell-date">
+                          <span class="due-date">—</span>
+                          <span class="due-sub">—</span>
+                        </td>
+                        <td class="cell-actions">
+                          <button class="icon-btn-sm" aria-label="View invoice">
+                            👁
+                          </button>
+                          <button class="kebab-btn" aria-label="More options">
+                            ⋮
+                          </button>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td class="cell-invoice">
+                          <span class="inv-icon inv-icon-red" aria-hidden="true"
+                            >▤</span
+                          >
+                          <div>
+                            <span class="inv-number">INV-2405-004</span>
+                            <span class="inv-request">Cookie Production</span>
+                            <span class="inv-id">REQ-2405-004</span>
+                          </div>
+                        </td>
+                        <td class="cell-factory">
+                          <span
+                            class="factory-logo factory-logo-amber"
+                            aria-hidden="true"
+                            >🍪</span
+                          >
+                          <div>
+                            <span class="factory-name">Golden Crust Ind.</span>
+                            <span class="factory-location">Abuja, Nigeria</span>
+                          </div>
+                        </td>
+                        <td class="cell-amount">
+                          <span class="amount">₦600,000</span>
+                          <span class="amount-sub">15,000 units</span>
+                        </td>
+                        <td class="cell-status">
+                          <span class="badge badge-red">Overdue</span>
+                          <span class="status-sub">3 days overdue</span>
+                        </td>
+                        <td class="cell-date">
+                          <span class="due-date">May 18, 2024</span>
+                          <span class="due-sub due-danger">Overdue</span>
+                        </td>
+                        <td class="cell-actions">
+                          <button class="icon-btn-sm" aria-label="View invoice">
+                            👁
+                          </button>
+                          <button class="kebab-btn" aria-label="More options">
+                            ⋮
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <!-- Pagination -->
+                <nav class="pagination" aria-label="Pagination">
+                  <button class="page-btn" aria-label="Previous page">‹</button>
+                  <button class="page-btn page-btn-active">1</button>
+                  <button class="page-btn">2</button>
+                  <button class="page-btn">3</button>
+                  <span class="page-ellipsis">…</span>
+                  <button class="page-btn">10</button>
+                  <button class="page-btn" aria-label="Next page">›</button>
+                </nav>
+              </section>
+            </div>
+
+            <!-- RIGHT / INFO PANEL -->
+            <aside class="payments-aside">
+              <!-- Invoice Details -->
+              <section class="card">
+                <div class="invoice-details-head">
+                  <h2 class="section-title">Invoice Details</h2>
+                </div>
+                <div class="invoice-id-row">
+                  <span class="invoice-id-value">INV-2405-002</span>
+                  <span class="badge badge-amber">Pending</span>
+                </div>
+
+                <div class="factory-mini-row">
+                  <span
+                    class="factory-logo factory-logo-teal"
+                    aria-hidden="true"
+                    >NF</span
+                  >
+                  <div>
+                    <span class="factory-name">NutriFoods Ltd</span>
+                    <span class="factory-location">Ibadan, Nigeria</span>
+                  </div>
+                  <a href="#" class="mini-link">View Profile →</a>
+                </div>
+
+                <ul class="summary-list">
+                  <li><span>Request</span><strong>Juice Bottles</strong></li>
+                  <li><span>Request ID</span><strong>REQ-2405-002</strong></li>
+                  <li>
+                    <span>Invoice Date</span><strong>May 24, 2024</strong>
+                  </li>
+                  <li>
+                    <span>Due Date</span
+                    ><strong
+                      >May 30, 2024
+                      <em class="due-flag">(2 days left)</em></strong
+                    >
+                  </li>
+                  <li>
+                    <span>Payment Terms</span><strong>50% Advance</strong>
+                  </li>
+                  <li>
+                    <span>Status</span
+                    ><span class="badge badge-amber">Pending Payment</span>
+                  </li>
+                </ul>
+              </section>
+
+              <!-- Payment Summary -->
+              <section class="card">
+                <h2 class="section-title">Payment Summary</h2>
+                <ul class="summary-list">
+                  <li><span>Subtotal</span><strong>₦450,000</strong></li>
+                  <li>
+                    <span>Advance Paid (50%)</span
+                    ><strong class="amount-positive">₦225,000</strong>
+                  </li>
+                  <li>
+                    <span>Balance Due</span
+                    ><strong class="amount-negative">₦225,000</strong>
+                  </li>
+                  <li><span>VAT (7.5%)</span><strong>₦33,750</strong></li>
+                </ul>
+                <div class="total-row">
+                  <span>Total Amount</span>
+                  <strong>₦450,000</strong>
+                </div>
+
+                <button class="btn btn-primary btn-block">
+                  <span aria-hidden="true">▤</span> Make Payment
+                </button>
+                <button class="btn btn-outline btn-block">
+                  <span aria-hidden="true">⭳</span> Download Invoice
+                </button>
+                <a href="#" class="view-all-link">View Payment History →</a>
+              </section>
+
+              <!-- Security card -->
+              <section class="card security-card">
+                <span class="security-icon" aria-hidden="true">🛡️</span>
+                <div>
+                  <span class="security-title">Your payment is secure</span>
+                  <p class="security-desc">
+                    We use bank-grade security to protect your transactions.
+                  </p>
+                </div>
+                <span class="security-lock" aria-hidden="true">🔒</span>
+              </section>
+            </aside>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script>
+      // Sidebar toggle (mobile)
+      const sidebar = document.getElementById("sidebar");
+      const sidebarOverlay = document.getElementById("sidebarOverlay");
+      const sidebarToggle = document.getElementById("sidebarToggle");
+      const sidebarClose = document.getElementById("sidebarClose");
+
+      function openSidebar() {
+        sidebar.classList.add("open");
+        sidebarOverlay.classList.add("show");
+      }
+      function closeSidebar() {
+        sidebar.classList.remove("open");
+        sidebarOverlay.classList.remove("show");
+      }
+      sidebarToggle.addEventListener("click", openSidebar);
+      sidebarClose.addEventListener("click", closeSidebar);
+      sidebarOverlay.addEventListener("click", closeSidebar);
+
+      // Tabs interaction
+      document.querySelectorAll(".tab").forEach((tab) => {
+        tab.addEventListener("click", () => {
+          document.querySelector(".tab-active").classList.remove("tab-active");
+          tab.classList.add("tab-active");
+        });
+      });
+
+      // Row selection updates Invoice Details panel highlight
+      document.querySelectorAll(".invoices-table tbody tr").forEach((row) => {
+        row.addEventListener("click", () => {
+          document.querySelector(".row-active")?.classList.remove("row-active");
+          row.classList.add("row-active");
+        });
+      });
+    </script>
+  </body>
+</html>

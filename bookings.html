@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VendHub | Request Production</title>
+<link rel="stylesheet" href="bookings.css" />
+</head>
+<body>
+
+  <!-- Mobile sidebar overlay -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="app-shell">
+
+    <!-- ============ SIDEBAR ============ -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+         <!-- Logo -->
+        <a class="logo" href="./">
+          <img src="VendHub_logos/VendHub logo.png" alt="VendHub logo" />
+        </a>
+        <button class="icon-btn sidebar-close" id="sidebarClose" aria-label="Close menu">✕</button>
+      </div>
+
+      <a href="settings.html">
+      <button class="user-card" type="button">
+        <img class="avatar" src="VendHub_svg/avatar.jpeg" alt="" />
+        <span class="user-meta">
+          <span class="user-name">Tosin Adeyemi</span>
+          <span class="user-role">Producer / Brand</span>
+        </span>
+        <span class="chev" aria-hidden="true">⌄</span>
+      </button> </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-item" href="dashboard.html">
+          <span class="nav-icon" aria-hidden="true">▦</span> Dashboard
+        </a>
+        <a class="nav-item" href="find_factories.html">
+          <span class="nav-icon" aria-hidden="true">⌕</span> Find Factories
+        </a>
+        <a class="nav-item" href="my_requests.html">
+          <span class="nav-icon" aria-hidden="true">▤</span> My Requests
+          <span class="nav-badge">2</span>
+        </a>
+        <a class="nav-item active" href="bookings.html">
+          <span class="nav-icon" aria-hidden="true">▥</span> Bookings
+        </a>
+        <a class="nav-item" href="production_tracking.html">
+          <span class="nav-icon" aria-hidden="true">⟢</span> Production Tracking
+        </a>
+        <a class="nav-item" href="messages.html">
+          <span class="nav-icon" aria-hidden="true">✉</span> Messages
+          <span class="nav-badge">6</span>
+        </a>
+        <a class="nav-item" href="payments.html">
+          <span class="nav-icon" aria-hidden="true">₦</span> Payments
+        </a>
+        <a class="nav-item" href="#">
+          <span class="nav-icon" aria-hidden="true">★</span> Favorites
+        </a>
+        <a class="nav-item" href="factory_profile.html">
+          <span class="nav-icon" aria-hidden="true">✎</span> Reviews
+        </a>
+        <a class="nav-item" href="#">
+          <span class="nav-icon" aria-hidden="true">▢</span> Documents
+        </a>
+        <a class="nav-item" href="settings.html">
+          <span class="nav-icon" aria-hidden="true">⚙</span> Settings
+        </a>
+      </nav>
+
+      <div class="sidebar-cards">
+        <div class="promo-card">
+          <span class="promo-icon" aria-hidden="true">🛟</span>
+          <h4>Need help with your request?</h4>
+          <p>Our support team is here to help you get the right factory.</p>
+          <button class="btn btn-outline btn-block" type="button">Contact Support</button>
+        </div>
+
+        <div class="help-card">
+          <span class="help-icon" aria-hidden="true">🎧</span>
+          <h4>How it works</h4>
+          <p>Learn how to request production and connect with verified factories.</p>
+          <a href="#" class="help-link">View Guide →</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ============ MAIN ============ -->
+    <div class="main">
+
+      <!-- Topbar -->
+      <header class="topbar">
+        <button class="icon-btn sidebar-toggle" id="sidebarToggle" aria-label="Open menu">☰</button>
+
+        <div class="search-bar">
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input type="search" placeholder="Search for factories, equipment or services..." aria-label="Search" />
+        </div>
+
+        <div class="topbar-actions">
+          <button class="icon-btn" aria-label="Messages">
+            <span aria-hidden="true">💬</span>
+            <span class="dot dot-purple">3</span>
+          </button>
+          <button class="icon-btn" aria-label="Notifications">
+            <span aria-hidden="true">🔔</span>
+            <span class="dot dot-red">6</span>
+          </button>
+          <button class="btn btn-primary">
+            <span aria-hidden="true">＋</span> Post a Request
+          </button>
+        </div>
+      </header>
+
+      <!-- Content -->
+      <main class="content">
+
+        <!-- Page heading -->
+        <section class="page-head">
+          <h1>Request Production</h1>
+          <p>Tell us what you need to produce and we'll connect you with the right factories.</p>
+        </section>
+
+        <!-- Two column layout: form + info panel, aligned from the heading down -->
+        <div class="booking-layout">
+
+          <!-- LEFT / FORM COLUMN -->
+          <div class="booking-main">
+
+            <!-- Step tracker -->
+            <nav class="stepper" aria-label="Form progress">
+              <div class="step step-active">
+                <span class="step-circle">1</span>
+                <span class="step-label">Production Details</span>
+              </div>
+              <span class="step-line"></span>
+              <div class="step">
+                <span class="step-circle">2</span>
+                <span class="step-label">Additional Requirements</span>
+              </div>
+              <span class="step-line"></span>
+              <div class="step">
+                <span class="step-circle">3</span>
+                <span class="step-label">Review &amp; Submit</span>
+              </div>
+            </nav>
+
+            <form class="form-card">
+
+              <!-- What do you want to produce -->
+              <fieldset class="form-section">
+                <legend>What do you want to produce?</legend>
+
+                <div class="form-row form-row-3">
+                  <div class="field">
+                    <label for="productName">Product / Item to Produce <span class="req">*</span></label>
+                    <div class="input-with-icon">
+                      <input id="productName" type="text" placeholder="e.g. Bread, Fruit Juice, Biscuits" />
+                      <span class="field-icon" aria-hidden="true">📅</span>
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label for="category">Category <span class="req">*</span></label>
+                    <select id="category">
+                      <option>Select category</option>
+                    </select>
+                  </div>
+
+                  <div class="field">
+                    <label for="subcategory">Subcategory</label>
+                    <select id="subcategory" disabled>
+                      <option>Select subcategory</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label for="productDesc">Product Description <span class="req">*</span></label>
+                  <span class="field-hint">Describe your product, ingredients, specifications, quality standards, packaging, etc.</span>
+                  <textarea id="productDesc" maxlength="1000" placeholder="Provide as much detail as possible..."></textarea>
+                  <span class="char-count">0/1000</span>
+                </div>
+              </fieldset>
+
+              <!-- Production Quantity -->
+              <fieldset class="form-section">
+                <legend>Production Quantity</legend>
+
+                <div class="form-row form-row-3">
+                  <div class="field">
+                    <label for="quantity">Required Quantity <span class="req">*</span></label>
+                    <input id="quantity" type="text" placeholder="Enter quantity" />
+                  </div>
+
+                  <div class="field">
+                    <label for="unit">Unit of Measurement <span class="req">*</span></label>
+                    <select id="unit">
+                      <option>Select unit</option>
+                    </select>
+                  </div>
+
+                  <div class="field">
+                    <label for="expectedOutput">Expected Output</label>
+                    <input id="expectedOutput" type="text" placeholder="e.g. 5,000 units per day" />
+                    <span class="field-hint">Expected daily or weekly output</span>
+                  </div>
+                </div>
+              </fieldset>
+
+              <!-- Packaging Requirements -->
+              <fieldset class="form-section">
+                <legend>Packaging Requirements</legend>
+
+                <div class="form-row form-row-2">
+                  <div class="field">
+                    <label>Do you have packaging for this product?</label>
+                    <ul class="radio-list">
+                      <li>
+                        <label><input type="radio" name="packaging" /> Yes, I will provide</label>
+                      </li>
+                      <li>
+                        <label><input type="radio" name="packaging" checked /> No, I need the factory to provide</label>
+                      </li>
+                      <li>
+                        <label><input type="radio" name="packaging" /> Not sure yet</label>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="field">
+                    <label for="packagingType">Packaging Type (if known)</label>
+                    <input id="packagingType" type="text" placeholder="e.g. Plastic Bottle, Carton Box, Pouch" />
+                    <span class="field-hint">Specify type, size, material, etc.</span>
+                  </div>
+                </div>
+              </fieldset>
+
+              <!-- Preferred Factory -->
+              <fieldset class="form-section">
+                <legend>Preferred Factory</legend>
+
+                <div class="form-row form-row-3">
+                  <div class="field">
+                    <label for="location">Location</label>
+                    <div class="input-with-icon">
+                      <input id="location" type="text" placeholder="Select location or enter city" />
+                      <span class="field-icon" aria-hidden="true">📍</span>
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label for="radius">Search Radius</label>
+                    <select id="radius">
+                      <option>Within 50 km</option>
+                    </select>
+                  </div>
+
+                  <div class="field">
+                    <label for="industryExp">Preferred Industry Experience</label>
+                    <select id="industryExp">
+                      <option>Select if any</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="toggle-row">
+                  <button type="button" class="toggle toggle-on" id="capacityToggle" role="switch" aria-checked="true" aria-label="Only show factories with available capacity">
+                    <span class="toggle-knob"></span>
+                  </button>
+                  <span>Only show factories with available capacity</span>
+                </div>
+              </fieldset>
+
+              <!-- Actions -->
+              <div class="form-actions">
+                <button type="button" class="btn btn-ghost">Cancel</button>
+                <button type="submit" class="btn btn-primary">Save &amp; Continue <span aria-hidden="true">→</span></button>
+              </div>
+            </form>
+          </div>
+
+          <!-- RIGHT / INFO PANEL -->
+          <aside class="booking-aside">
+
+            <!-- Request Summary -->
+            <section class="card">
+              <div class="card-title-row">
+                <span class="card-title-icon" aria-hidden="true">📋</span>
+                <div>
+                  <h2>Request Summary</h2>
+                  <p class="card-sub">This summary will be visible to factories you send this request to.</p>
+                </div>
+              </div>
+
+              <ul class="summary-list">
+                <li>
+                  <span class="summary-icon" aria-hidden="true">📦</span>
+                  <span class="summary-label">Product</span>
+                  <span class="summary-value">Not specified</span>
+                </li>
+                <li>
+                  <span class="summary-icon" aria-hidden="true">🔢</span>
+                  <span class="summary-label">Quantity</span>
+                  <span class="summary-value">Not specified</span>
+                </li>
+                <li>
+                  <span class="summary-icon" aria-hidden="true">🏷️</span>
+                  <span class="summary-label">Category</span>
+                  <span class="summary-value">Not selected</span>
+                </li>
+                <li>
+                  <span class="summary-icon" aria-hidden="true">📍</span>
+                  <span class="summary-label">Location</span>
+                  <span class="summary-value">Not specified</span>
+                </li>
+                <li>
+                  <span class="summary-icon" aria-hidden="true">⏱️</span>
+                  <span class="summary-label">Lead Time</span>
+                  <span class="summary-value">Not specified</span>
+                </li>
+                <li>
+                  <span class="summary-icon" aria-hidden="true">💰</span>
+                  <span class="summary-label">Budget Range</span>
+                  <span class="summary-value">Not specified</span>
+                </li>
+              </ul>
+            </section>
+
+            <!-- What happens next -->
+            <section class="card">
+              <div class="card-title-row">
+                <span class="card-title-icon" aria-hidden="true">💡</span>
+                <h2>What happens next?</h2>
+              </div>
+
+              <ol class="timeline">
+                <li>
+                  <span class="timeline-dot" aria-hidden="true">1</span>
+                  <div>
+                    <span class="timeline-title">We match you with verified factories</span>
+                    <span class="timeline-desc">We'll notify suitable factories about your request.</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="timeline-dot" aria-hidden="true">2</span>
+                  <div>
+                    <span class="timeline-title">Receive quotes &amp; proposals</span>
+                    <span class="timeline-desc">Interested factories will send you their quotes.</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="timeline-dot" aria-hidden="true">3</span>
+                  <div>
+                    <span class="timeline-title">Compare &amp; choose</span>
+                    <span class="timeline-desc">Review quotes, chat and select the best fit.</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="timeline-dot" aria-hidden="true">4</span>
+                  <div>
+                    <span class="timeline-title">Confirm &amp; start production</span>
+                    <span class="timeline-desc">Make payment securely and start your production.</span>
+                  </div>
+                </li>
+              </ol>
+            </section>
+
+            <!-- Security & Trust -->
+            <section class="card security-card">
+              <div class="card-title-row">
+                <span class="card-title-icon card-title-icon-green" aria-hidden="true">🛡️</span>
+                <div>
+                  <h2>Secure &amp; Trusted</h2>
+                  <p class="card-sub">Your information is secure. We only share your request details with verified factories.</p>
+                </div>
+              </div>
+
+              <ul class="check-list">
+                <li><span aria-hidden="true">✔</span> Verified factories only</li>
+                <li><span aria-hidden="true">✔</span> Secure communication</li>
+                <li><span aria-hidden="true">✔</span> Protected payments</li>
+              </ul>
+            </section>
+          </aside>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    // Sidebar toggle (mobile)
+    const sidebar = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const sidebarClose = document.getElementById('sidebarClose');
+
+    function openSidebar(){ sidebar.classList.add('open'); sidebarOverlay.classList.add('show'); }
+    function closeSidebar(){ sidebar.classList.remove('open'); sidebarOverlay.classList.remove('show'); }
+    sidebarToggle.addEventListener('click', openSidebar);
+    sidebarClose.addEventListener('click', closeSidebar);
+    sidebarOverlay.addEventListener('click', closeSidebar);
+
+    // Character counter for description
+    const descField = document.getElementById('productDesc');
+    const charCount = document.querySelector('.char-count');
+    descField.addEventListener('input', () => {
+      charCount.textContent = `${descField.value.length}/1000`;
+    });
+
+    // Toggle switch
+    const capacityToggle = document.getElementById('capacityToggle');
+    capacityToggle.addEventListener('click', () => {
+      const isOn = capacityToggle.classList.toggle('toggle-on');
+      capacityToggle.setAttribute('aria-checked', isOn ? 'true' : 'false');
+    });
+
+    // Enable subcategory once category is chosen (demo behavior)
+    document.getElementById('category').addEventListener('change', (e) => {
+      document.getElementById('subcategory').disabled = e.target.selectedIndex === 0;
+    });
+  </script>
+</body>
+</html>

@@ -406,9 +406,22 @@ h1 {
   align-items: flex-start;
   background: white;
   width: 280px;
-  padding: 12px;
+  padding: 10px 18px;
   border-radius: 20px;
   box-shadow: 0 14px 40px rgba(15, 23, 36, 0.08);
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    background 0.22s ease;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+.step-card:hover,
+.step-card:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px rgba(15, 23, 36, 0.14);
+  background: #ffffff;
 }
 .step-icon {
   width: 58px;

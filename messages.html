@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VendHub | Messages</title>
+<link rel="stylesheet" href="messages.css" />
+</head>
+<body>
+
+  <!-- Mobile sidebar overlay -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="app-shell">
+
+    <!-- ============ SIDEBAR ============ -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+         <!-- Logo -->
+        <a class="logo" href="./">
+          <img src="VendHub_logos/VendHub logo.png" alt="VendHub logo" />
+        </a>
+        <button class="icon-btn sidebar-close" id="sidebarClose" aria-label="Close menu">✕</button>
+      </div>
+
+      <a href="settings.html">
+      <button class="user-card" type="button">
+        <img class="avatar" src="VendHub_svg/avatar.jpeg" alt="" />
+        <span class="user-meta">
+          <span class="user-name">Tosin Adeyemi</span>
+          <span class="user-role">Producer / Brand</span>
+        </span>
+        <span class="chev" aria-hidden="true">⌄</span>
+      </button> </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-item" href="dashboard.html">
+          <span class="nav-icon" aria-hidden="true">▦</span> Dashboard
+        </a>
+        <a class="nav-item" href="find_factories.html">
+          <span class="nav-icon" aria-hidden="true">⌕</span> Find Factories
+        </a>
+        <a class="nav-item" href="my_requests.html">
+          <span class="nav-icon" aria-hidden="true">▤</span> My Requests
+          <span class="nav-badge">2</span>
+        </a>
+        <a class="nav-item" href="bookings.html">
+          <span class="nav-icon" aria-hidden="true">▥</span> Bookings
+        </a>
+        <a class="nav-item" href="production_tracking.html">
+          <span class="nav-icon" aria-hidden="true">⟢</span> Production Tracking
+        </a>
+        <a class="nav-item active" href="messages.html">
+          <span class="nav-icon" aria-hidden="true">✉</span> Messages
+          <span class="nav-badge">8</span>
+        </a>
+        <a class="nav-item" href="payments.html">
+          <span class="nav-icon" aria-hidden="true">₦</span> Payments
+        </a>
+        <a class="nav-item" href="#">
+          <span class="nav-icon" aria-hidden="true">★</span> Favorites
+        </a>
+        <a class="nav-item" href="factory_profile.html">
+          <span class="nav-icon" aria-hidden="true">✎</span> Reviews
+        </a>
+        <a class="nav-item" href="#">
+          <span class="nav-icon" aria-hidden="true">▢</span> Documents
+        </a>
+        <a class="nav-item" href="#">
+          <span class="nav-icon" aria-hidden="true">⚙</span> Settings
+        </a>
+      </nav>
+
+      <div class="sidebar-cards">
+        <div class="promo-card">
+          <span class="promo-icon" aria-hidden="true">📋</span>
+          <h4>Need help with your request?</h4>
+          <p>Our support team is here to help you at every step.</p>
+          <button class="btn btn-outline btn-block" type="button">Contact Support</button>
+        </div>
+
+        <div class="help-card">
+          <span class="help-icon" aria-hidden="true">👥</span>
+          <h4>Invite a colleague</h4>
+          <p>Collaborate with your team and manage requests together.</p>
+          <a href="#" class="help-link">Invite Now →</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ============ MAIN ============ -->
+    <div class="main">
+
+      <!-- Topbar -->
+      <header class="topbar">
+        <button class="icon-btn sidebar-toggle" id="sidebarToggle" aria-label="Open menu">☰</button>
+
+        <div class="search-bar">
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input type="search" placeholder="Search for factories, equipment or services..." aria-label="Search" />
+        </div>
+
+        <div class="topbar-actions">
+          <button class="icon-btn" aria-label="Messages">
+            <span aria-hidden="true">💬</span>
+            <span class="dot dot-purple">3</span>
+          </button>
+          <button class="icon-btn" aria-label="Notifications">
+            <span aria-hidden="true">🔔</span>
+            <span class="dot dot-red">6</span>
+          </button>
+          <button class="btn btn-primary">
+            <span aria-hidden="true">＋</span> Post a Request
+          </button>
+        </div>
+      </header>
+
+      <!-- Content -->
+      <main class="content">
+
+        <!-- Page heading -->
+        <section class="page-head">
+          <h1>Messages</h1>
+          <p>Communicate with factories, share updates and manage your production easily.</p>
+        </section>
+
+        <!-- Three panel messaging layout -->
+        <div class="messaging-layout">
+
+          <!-- ============ LEFT: CONVERSATION PANEL ============ -->
+          <section class="conv-panel" aria-label="Conversations">
+            <div class="conv-search-row">
+              <div class="input-with-icon conv-search">
+                <input type="text" placeholder="Search messages..." aria-label="Search messages" />
+                <span class="field-icon" aria-hidden="true">⌕</span>
+              </div>
+              <button class="icon-btn" aria-label="Filter conversations">
+                <span aria-hidden="true">▤</span>
+              </button>
+            </div>
+
+            <nav class="conv-tabs" aria-label="Conversation filters">
+              <button class="conv-tab conv-tab-active">All</button>
+              <button class="conv-tab">Unread <span class="tab-count">(8)</span></button>
+              <button class="conv-tab">Favorites</button>
+            </nav>
+
+            <ul class="conv-list">
+              <li class="conv-item conv-item-active">
+                <span class="conv-logo conv-logo-green" aria-hidden="true">ABC<br />FOODS</span>
+                <div class="conv-body">
+                  <div class="conv-top">
+                    <span class="conv-name">ABC Foods Factory</span>
+                    <span class="conv-time">10:30 AM</span>
+                  </div>
+                  <div class="conv-bottom">
+                    <span class="conv-preview">We have received your request and will get back to you shortly.</span>
+                    <span class="conv-badge">2</span>
+                  </div>
+                </div>
+              </li>
+
+              <li class="conv-item">
+                <span class="conv-logo conv-logo-teal" aria-hidden="true">NF</span>
+                <div class="conv-body">
+                  <div class="conv-top">
+                    <span class="conv-name">NutriFoods Ltd</span>
+                    <span class="conv-time">Yesterday</span>
+                  </div>
+                  <div class="conv-bottom">
+                    <span class="conv-preview">Please find the updated quotation attached.</span>
+                    <span class="conv-badge">1</span>
+                  </div>
+                </div>
+              </li>
+
+              <li class="conv-item">
+                <span class="conv-logo conv-logo-violet" aria-hidden="true">◇</span>
+                <div class="conv-body">
+                  <div class="conv-top">
+                    <span class="conv-name">PackRight Solutions</span>
+                    <span class="conv-time">May 22</span>
+                  </div>
+                  <div class="conv-bottom">
+                    <span class="conv-preview">Can you confirm the packaging specifications?</span>
+                  </div>
+                </div>
+              </li>
+
+              <li class="conv-item">
+                <span class="conv-logo conv-logo-amber" aria-hidden="true">🍞</span>
+                <div class="conv-body">
+                  <div class="conv-top">
+                    <span class="conv-name">Golden Crust Industries</span>
+                    <span class="conv-time">May 20</span>
+                  </div>
+                  <div class="conv-bottom">
+                    <span class="conv-preview">Thanks for your message. Our team will review and revert.</span>
+                  </div>
+                </div>
+              </li>
+
+              <li class="conv-item">
+                <span class="conv-logo conv-logo-teal" aria-hidden="true">📦</span>
+                <div class="conv-body">
+                  <div class="conv-top">
+                    <span class="conv-name">SecurePack Ltd</span>
+                    <span class="conv-time">May 19</span>
+                  </div>
+                  <div class="conv-bottom">
+                    <span class="conv-preview">We can deliver by May 30 as discussed.</span>
+                  </div>
+                </div>
+              </li>
+
+              <li class="conv-item">
+                <span class="conv-logo conv-logo-blue" aria-hidden="true">🥤</span>
+                <div class="conv-body">
+                  <div class="conv-top">
+                    <span class="conv-name">Beverage Makers NG</span>
+                    <span class="conv-time">May 18</span>
+                  </div>
+                  <div class="conv-bottom">
+                    <span class="conv-preview">Do you have a minimum order requirement?</span>
+                  </div>
+                </div>
+              </li>
+
+              <li class="conv-item">
+                <span class="conv-logo conv-logo-green" aria-hidden="true">🌿</span>
+                <div class="conv-body">
+                  <div class="conv-top">
+                    <span class="conv-name">FreshDelight Factory</span>
+                    <span class="conv-time">May 16</span>
+                  </div>
+                  <div class="conv-bottom">
+                    <span class="conv-preview">We've completed the quality check and passed.</span>
+                  </div>
+                </div>
+              </li>
+
+              <li class="conv-item">
+                <span class="conv-logo conv-logo-orange" aria-hidden="true">●</span>
+                <div class="conv-body">
+                  <div class="conv-top">
+                    <span class="conv-name">RightBlend Foods</span>
+                    <span class="conv-time">May 14</span>
+                  </div>
+                  <div class="conv-bottom">
+                    <span class="conv-preview">Let us know if you need any further changes.</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <!-- ============ CENTER: CHAT PANEL ============ -->
+          <section class="chat-panel" aria-label="Conversation with ABC Foods Factory">
+
+            <header class="chat-header">
+              <button class="icon-btn chat-back" id="chatBack" aria-label="Back to conversations">←</button>
+              <span class="chat-logo" aria-hidden="true">ABC<br />FOODS</span>
+              <div class="chat-header-info">
+                <div class="chat-header-top">
+                  <span class="chat-header-name">ABC Foods Factory</span>
+                  <span class="verified-pill">✓ Verified Factory</span>
+                </div>
+                <span class="chat-header-sub">Typically replies in a few hours</span>
+              </div>
+              <div class="chat-header-actions">
+                <button class="icon-btn" aria-label="Voice call">📞</button>
+                <button class="icon-btn" aria-label="Video call">🎥</button>
+                <button class="icon-btn chat-info-toggle" id="chatInfoToggle" aria-label="Conversation info">ⓘ</button>
+              </div>
+            </header>
+
+            <div class="chat-body">
+              <span class="date-separator"><span>May 24, 2024</span></span>
+
+              <div class="msg-row msg-in">
+                <span class="msg-avatar" aria-hidden="true">ABC<br />FOODS</span>
+                <div class="msg-bubble">
+                  <p>Hello Tosin,</p>
+                  <p>We have received your request for Bread Production (20,000 units). Thank you for considering ABC Foods Factory.</p>
+                  <p>We are reviewing your requirements and will get back to you with our quotation shortly.</p>
+                  <p>Best regards,<br />John Okafor<br />Sales Manager</p>
+                  <span class="msg-time">10:30 AM</span>
+                </div>
+              </div>
+
+              <div class="msg-row msg-out">
+                <div class="msg-bubble">
+                  <p>Hi John,</p>
+                  <p>Great! Please let me know if you need any additional information from my end.</p>
+                  <p>Thanks.</p>
+                  <span class="msg-time">10:32 AM <span aria-hidden="true">✓✓</span></span>
+                </div>
+              </div>
+
+              <div class="msg-row msg-in">
+                <span class="msg-avatar" aria-hidden="true">ABC<br />FOODS</span>
+                <div class="msg-bubble">
+                  <p>Thank you! Could you please confirm the packaging type and your preferred delivery date window?</p>
+                  <span class="msg-time">10:35 AM</span>
+                </div>
+              </div>
+
+              <div class="msg-row msg-out">
+                <div class="msg-bubble">
+                  <p>Sure, we need Plastic Bread Bags (500g) and the delivery window is May 30 – June 2.</p>
+                  <span class="msg-time">10:37 AM <span aria-hidden="true">✓✓</span></span>
+                </div>
+              </div>
+
+              <div class="msg-row msg-in msg-typing">
+                <span class="msg-avatar" aria-hidden="true">ABC<br />FOODS</span>
+                <div class="typing-bubble">
+                  <span class="typing-dot"></span>
+                  <span class="typing-dot"></span>
+                  <span class="typing-dot"></span>
+                </div>
+              </div>
+              <span class="typing-caption">ABC Foods Factory is typing...</span>
+            </div>
+
+            <form class="chat-composer">
+              <button type="button" class="icon-btn" aria-label="Attach file">📎</button>
+              <input type="text" placeholder="Type your message..." aria-label="Type your message" />
+              <button type="submit" class="btn btn-primary">Send</button>
+            </form>
+          </section>
+
+          <!-- ============ RIGHT: INFO PANEL ============ -->
+          <aside class="info-panel" id="infoPanel" aria-label="Conversation details">
+
+            <!-- Factory Details -->
+            <section class="card">
+              <h2 class="section-title">Factory Details</h2>
+              <div class="factory-row">
+                <span class="factory-logo" aria-hidden="true">ABC<br />FOODS</span>
+                <div class="factory-info">
+                  <span class="factory-name">ABC Foods Factory</span>
+                  <span class="factory-rating">★ 4.8 <span class="muted">(124 reviews)</span></span>
+                  <span class="factory-location"><span aria-hidden="true">📍</span> Lagos, Nigeria</span>
+                </div>
+              </div>
+              <button class="btn btn-outline btn-block">View Factory Profile</button>
+            </section>
+
+            <!-- About this conversation -->
+            <section class="card">
+              <h2 class="section-title">About this conversation</h2>
+              <ul class="summary-list">
+                <li><span>Request</span><strong>Bread Production</strong></li>
+                <li><span>Request ID</span><strong>REQ-2405-001</strong></li>
+                <li><span>Status</span><span class="badge badge-blue">In Production</span></li>
+                <li><span>Quantity</span><strong>20,000 units</strong></li>
+                <li><span>Created On</span><strong>May 24, 2024</strong></li>
+              </ul>
+              <a href="#" class="view-all-link">View Request Details →</a>
+            </section>
+
+            <!-- Shared Files -->
+            <section class="card">
+              <h2 class="section-title">Shared Files</h2>
+              <ul class="file-list">
+                <li class="file-item">
+                  <span class="file-icon file-icon-red" aria-hidden="true">📄</span>
+                  <div class="file-info">
+                    <span class="file-name">Bread_Bag_Specification.pdf</span>
+                    <span class="file-meta">245 KB · May 24, 2024</span>
+                  </div>
+                </li>
+                <li class="file-item">
+                  <span class="file-icon file-icon-green" aria-hidden="true">🖼️</span>
+                  <div class="file-info">
+                    <span class="file-name">Product_Images_Reference.jpg</span>
+                    <span class="file-meta">1.2 MB · May 24, 2024</span>
+                  </div>
+                </li>
+                <li class="file-item">
+                  <span class="file-icon file-icon-red" aria-hidden="true">📄</span>
+                  <div class="file-info">
+                    <span class="file-name">Packaging_Details.pdf</span>
+                    <span class="file-meta">189 KB · May 24, 2024</span>
+                  </div>
+                </li>
+              </ul>
+              <a href="#" class="view-all-link">View all files →</a>
+            </section>
+
+            <!-- Conversation Settings -->
+            <section class="card">
+              <div class="setting-row">
+                <span aria-hidden="true">🔔</span>
+                <span class="setting-label">Mute notifications</span>
+                <button type="button" class="toggle" id="muteToggle" role="switch" aria-checked="false" aria-label="Mute notifications">
+                  <span class="toggle-knob"></span>
+                </button>
+              </div>
+              <button type="button" class="block-link">
+                <span aria-hidden="true">🚫</span> Block this factory
+              </button>
+            </section>
+          </aside>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    // Sidebar toggle (mobile)
+    const sidebar = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const sidebarClose = document.getElementById('sidebarClose');
+
+    function openSidebar(){ sidebar.classList.add('open'); sidebarOverlay.classList.add('show'); }
+    function closeSidebar(){ sidebar.classList.remove('open'); sidebarOverlay.classList.remove('show'); }
+    sidebarToggle.addEventListener('click', openSidebar);
+    sidebarClose.addEventListener('click', closeSidebar);
+    sidebarOverlay.addEventListener('click', closeSidebar);
+
+    // Conversation tabs
+    document.querySelectorAll('.conv-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelector('.conv-tab-active').classList.remove('conv-tab-active');
+        tab.classList.add('conv-tab-active');
+      });
+    });
+
+    // Conversation item selection
+    document.querySelectorAll('.conv-item').forEach(item => {
+      item.addEventListener('click', () => {
+        document.querySelector('.conv-item-active')?.classList.remove('conv-item-active');
+        item.classList.add('conv-item-active');
+        document.querySelector('.messaging-layout').classList.add('show-chat');
+      });
+    });
+
+    // Mobile: back button returns to conversation list
+    document.getElementById('chatBack').addEventListener('click', () => {
+      document.querySelector('.messaging-layout').classList.remove('show-chat');
+    });
+
+    // Mobile: info toggle shows/hides right panel
+    const infoPanel = document.getElementById('infoPanel');
+    document.getElementById('chatInfoToggle').addEventListener('click', () => {
+      infoPanel.classList.toggle('show-info');
+    });
+
+    // Toggle switch
+    document.getElementById('muteToggle').addEventListener('click', function(){
+      const isOn = this.classList.toggle('toggle-on');
+      this.setAttribute('aria-checked', isOn ? 'true' : 'false');
+    });
+  </script>
+</body>
+</html>

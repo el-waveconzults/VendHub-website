@@ -8,24 +8,25 @@
    ============================================================ */
 :root {
   /* Brand colours */
-  --primary:         #4F35D2;   /* indigo-purple – Factory Owner */
-  --primary-hover:   #3D28B0;
-  --primary-light:   #EEE9FF;
+  --primary: #4f35d2; /* indigo-purple – Factory Owner */
+  --primary-hover: #3d28b0;
+  --primary-light: #eee9ff;
 
-  --secondary:       #1A7A4A;   /* forest green – Producer / Brand */
-  --secondary-hover: #15673E;
-  --secondary-light: #E6F7EE;
+  --secondary: #1a7a4a; /* forest green – Producer / Brand */
+  --secondary-hover: #15673e;
+  --secondary-light: #e6f7ee;
 
   /* Neutrals */
-  --bg:              #F5F5FA;
-  --surface:         #FFFFFF;
-  --border:          #E2E2EC;
-  --text-primary:    #0F0B2D;
-  --text-secondary:  #6B6B80;
-  --text-muted:      #9A9AAF;
+  --bg: #f5f5fa;
+  --surface: #ffffff;
+  --border: #e2e2ec;
+  --text-primary: #0f0b2d;
+  --text-secondary: #6b6b80;
+  --text-muted: #9a9aaf;
 
   /* Typography */
-  --font-sans: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans:
+    "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 
   /* Spacing */
   --nav-h: 68px;
@@ -34,14 +35,18 @@
   --radius-lg: 20px;
 
   /* Shadows */
-  --shadow-card: 0 2px 12px rgba(15, 11, 45, 0.07), 0 1px 3px rgba(15, 11, 45, 0.05);
-  --shadow-card-hover: 0 8px 32px rgba(15, 11, 45, 0.12), 0 2px 8px rgba(15, 11, 45, 0.07);
+  --shadow-card:
+    0 2px 12px rgba(15, 11, 45, 0.07), 0 1px 3px rgba(15, 11, 45, 0.05);
+  --shadow-card-hover:
+    0 8px 32px rgba(15, 11, 45, 0.12), 0 2px 8px rgba(15, 11, 45, 0.07);
 }
 
 /* ============================================================
    RESET & BASE
    ============================================================ */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -117,7 +122,9 @@ button {
   color: var(--text-secondary);
   padding: 6px 10px;
   border-radius: var(--radius-sm);
-  transition: color 0.18s, background 0.18s;
+  transition:
+    color 0.18s,
+    background 0.18s;
   white-space: nowrap;
   display: inline-flex;
   align-items: center;
@@ -151,7 +158,9 @@ button {
   padding: 8px 18px;
   border: 1.5px solid var(--border);
   border-radius: var(--radius-sm);
-  transition: border-color 0.18s, background 0.18s;
+  transition:
+    border-color 0.18s,
+    background 0.18s;
 }
 
 .btn-login:hover {
@@ -167,7 +176,9 @@ button {
   padding: 8px 18px;
   background: var(--primary);
   border-radius: var(--radius-sm);
-  transition: background 0.18s, transform 0.12s;
+  transition:
+    background 0.18s,
+    transform 0.12s;
 }
 
 .btn-signup:hover {
@@ -191,12 +202,20 @@ button {
   height: 2px;
   background: var(--text-primary);
   border-radius: 2px;
-  transition: transform 0.22s, opacity 0.22s;
+  transition:
+    transform 0.22s,
+    opacity 0.22s;
 }
 
-.nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.nav-toggle.open span:nth-child(2) { opacity: 0; }
-.nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.nav-toggle.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
 
 /* ============================================================
    MAIN CONTENT WRAPPER
@@ -212,7 +231,7 @@ button {
 
 /* Step badge */
 .step-badge {
-   display: inline-block;
+  display: inline-block;
   padding: 8px 14px;
   border-radius: 999px;
   background: var(--primary-light);
@@ -265,7 +284,10 @@ button {
   box-shadow: var(--shadow-card);
   display: flex;
   flex-direction: column;
-  transition: box-shadow 0.22s, transform 0.2s, border-color 0.2s;
+  transition:
+    box-shadow 0.22s,
+    transform 0.2s,
+    border-color 0.2s;
   cursor: pointer;
   outline: none;
 }
@@ -291,11 +313,11 @@ button {
 }
 
 .factory-illustration {
-  background: linear-gradient(135deg, #EEE9FF 0%, #E0D8FF 100%);
+  background: linear-gradient(135deg, #eee9ff 0%, #e0d8ff 100%);
 }
 
 .producer-illustration {
-  background: linear-gradient(135deg, #E9F7EF 0%, #D5F0E2 100%);
+  background: linear-gradient(135deg, #e9f7ef 0%, #d5f0e2 100%);
 }
 
 /* Icon badge (top-left) */
@@ -310,7 +332,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.09);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.09);
   z-index: 2;
 }
 
@@ -344,8 +366,12 @@ button {
   top: -36px;
 }
 
-.factory-chimney.left  { left: 20px; }
-.factory-chimney.right { right: 20px; }
+.factory-chimney.left {
+  left: 20px;
+}
+.factory-chimney.right {
+  right: 20px;
+}
 
 .factory-body {
   width: 130px;
@@ -357,7 +383,7 @@ button {
   align-items: center;
   justify-content: space-around;
   padding: 10px 12px 0;
-  box-shadow: 0 4px 20px rgba(79,53,210,0.15);
+  box-shadow: 0 4px 20px rgba(79, 53, 210, 0.15);
 }
 
 .factory-windows {
@@ -388,12 +414,12 @@ button {
   background: white;
   border-radius: 6px;
   margin-bottom: 0;
-  box-shadow: 0 2px 10px rgba(79,53,210,0.1);
+  box-shadow: 0 2px 10px rgba(79, 53, 210, 0.1);
   position: relative;
 }
 
 .factory-machine::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 10px;
   left: 8px;
@@ -404,7 +430,7 @@ button {
 }
 
 .factory-machine::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 24px;
   left: 8px;
@@ -429,27 +455,36 @@ button {
 }
 
 .box {
-  background: #C8A96E;
+  background: #c8a96e;
   border-radius: 3px;
-  box-shadow: inset -3px -3px 0 rgba(0,0,0,0.12);
+  box-shadow: inset -3px -3px 0 rgba(0, 0, 0, 0.12);
   position: relative;
 }
 
 .box::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 5px;
   left: 50%;
   transform: translateX(-50%);
   width: 60%;
   height: 1.5px;
-  background: rgba(0,0,0,0.1);
+  background: rgba(0, 0, 0, 0.1);
   border-radius: 1px;
 }
 
-.box-large  { width: 80px; height: 56px; }
-.box-medium { width: 68px; height: 48px; }
-.box-small  { width: 54px; height: 38px; }
+.box-large {
+  width: 80px;
+  height: 56px;
+}
+.box-medium {
+  width: 68px;
+  height: 48px;
+}
+.box-small {
+  width: 54px;
+  height: 38px;
+}
 
 .product-items {
   display: flex;
@@ -465,10 +500,13 @@ button {
   position: relative;
 }
 
-.product-bottle.green { background: var(--secondary); opacity: 0.8; }
+.product-bottle.green {
+  background: var(--secondary);
+  opacity: 0.8;
+}
 
 .product-bottle::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -8px;
   left: 50%;
@@ -484,18 +522,18 @@ button {
   width: 28px;
   height: 30px;
   border-radius: 4px;
-  background: #D4A843;
+  background: #d4a843;
   position: relative;
 }
 
 .product-jar::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -6px;
   left: 3px;
   right: 3px;
   height: 7px;
-  background: #B8922E;
+  background: #b8922e;
   border-radius: 2px;
 }
 
@@ -503,7 +541,7 @@ button {
 .product-pouch {
   width: 22px;
   height: 44px;
-  background: #E8E2F8;
+  background: #e8e2f8;
   border-radius: 3px 3px 6px 6px;
   border: 1.5px solid var(--primary);
   opacity: 0.7;
@@ -571,14 +609,17 @@ button {
   font-size: 0.9375rem;
   font-weight: 600;
   color: white;
-  transition: background 0.18s, transform 0.14s, box-shadow 0.18s;
+  transition:
+    background 0.18s,
+    transform 0.14s,
+    box-shadow 0.18s;
   text-align: center;
   letter-spacing: -0.01em;
 }
 
 .btn-card:hover {
   transform: translateY(-1px);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
 .btn-card:active {
@@ -663,7 +704,10 @@ button {
   font-size: 0.875rem;
   font-weight: 600;
   color: var(--text-muted);
-  transition: border-color 0.2s, background 0.2s, color 0.2s;
+  transition:
+    border-color 0.2s,
+    background 0.2s,
+    color 0.2s;
 }
 
 .active-circle {
@@ -722,6 +766,7 @@ button {
   }
 
   .nav-inner {
+    position: relative;
     flex-wrap: wrap;
     height: auto;
     padding: 12px 16px;
@@ -735,11 +780,16 @@ button {
 
   .nav-links {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.98);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 20px 40px rgba(15, 11, 45, 0.08);
+    padding: 16px 20px 18px;
     flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    padding: 8px 0 4px;
-    gap: 2px;
+    gap: 10px;
   }
 
   .nav-links.open {
@@ -748,10 +798,16 @@ button {
 
   .nav-auth {
     display: none;
-    width: 100%;
-    flex-direction: row;
-    padding: 8px 0 12px;
-    margin-left: 0;
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.98);
+    padding: 16px 20px 20px;
+    flex-direction: column;
+    gap: 10px;
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 20px 40px rgba(15, 11, 45, 0.08);
   }
 
   .nav-auth.open {

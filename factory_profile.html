@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VendHub | Factory Profile</title>
+<link rel="stylesheet" href="factory_profile.css" />
+</head>
+<body>
+
+  <!-- Mobile sidebar overlay -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="app-shell">
+
+    <!-- ============ SIDEBAR ============ -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <!-- Logo -->
+        <a class="logo" href="./">
+          <img src="VendHub_logos/VendHub logo.png" alt="VendHub logo" />
+        </a>
+        <button class="icon-btn sidebar-close" id="sidebarClose" aria-label="Close menu">✕</button>
+      </div>
+
+      <a href="settings.html">
+      <button class="user-card" type="button">
+        <img class="avatar" src="VendHub_svg/avatar.jpeg" alt="" />
+        <span class="user-meta">
+          <span class="user-name">Tosin Adeyemi</span>
+          <span class="user-role">Producer / Brand</span>
+        </span>
+        <span class="chev" aria-hidden="true">⌄</span>
+      </button> </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-item" href="dashboard.html">
+          <span class="nav-icon" aria-hidden="true">▦</span> Dashboard
+        </a>
+        <a class="nav-item" href="find_factories.html">
+          <span class="nav-icon" aria-hidden="true">⌕</span> Find Factories
+        </a>
+        <a class="nav-item" href="my_requests.html">
+          <span class="nav-icon" aria-hidden="true">▤</span> My Requests
+        </a>
+        <a class="nav-item" href="bookings.html">
+          <span class="nav-icon" aria-hidden="true">▥</span> Bookings
+        </a>
+        <a class="nav-item" href="production_tracking.html">
+          <span class="nav-icon" aria-hidden="true">⟢</span> Production Tracking
+        </a>
+        <a class="nav-item" href="messages.html">
+          <span class="nav-icon" aria-hidden="true">✉</span> Messages
+          <span class="nav-badge">8</span>
+        </a>
+        <a class="nav-item" href="payments.html">
+          <span class="nav-icon" aria-hidden="true">₦</span> Payments
+        </a>
+        <a class="nav-item" href="#">
+          <span class="nav-icon" aria-hidden="true">★</span> Favorites
+        </a>
+        <a class="nav-item active" href="factory_profile.html">
+          <span class="nav-icon" aria-hidden="true">✎</span> Reviews
+        </a>
+        <a class="nav-item" href="#">
+          <span class="nav-icon" aria-hidden="true">▢</span> Documents
+        </a>
+        <a class="nav-item" href="settings.html">
+          <span class="nav-icon" aria-hidden="true">⚙</span> Settings
+        </a>
+      </nav>
+
+      <div class="sidebar-cards">
+        <div class="promo-card">
+          <span class="promo-icon" aria-hidden="true">📋</span>
+          <h4>Need a factory for your next production?</h4>
+          <p>Post your requirement and receive quotes from verified factories.</p>
+          <button class="btn btn-outline btn-block" type="button">
+            <span aria-hidden="true">＋</span> Post a Request
+          </button>
+        </div>
+
+        <div class="help-card">
+          <span class="help-icon" aria-hidden="true">🎧</span>
+          <h4>Need Help?</h4>
+          <p>We're here to assist you</p>
+          <a href="#" class="help-link">Contact Support</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ============ MAIN ============ -->
+    <div class="main">
+
+      <!-- Topbar -->
+      <header class="topbar">
+        <button class="icon-btn sidebar-toggle" id="sidebarToggle" aria-label="Open menu">☰</button>
+
+        <div class="search-bar">
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input type="search" placeholder="Search for factories, equipment or services..." aria-label="Search" />
+        </div>
+
+        <div class="topbar-actions">
+          <button class="icon-btn" aria-label="Messages">
+            <span aria-hidden="true">💬</span>
+            <span class="dot dot-purple">3</span>
+          </button>
+          <button class="icon-btn" aria-label="Notifications">
+            <span aria-hidden="true">🔔</span>
+            <span class="dot dot-red">7</span>
+          </button>
+          <button class="btn btn-primary">
+            <span aria-hidden="true">＋</span> Post a Request
+          </button>
+        </div>
+      </header>
+
+      <!-- Content -->
+      <main class="content">
+
+        <a href="find_factories.html" class="back-link"><span aria-hidden="true">←</span> Back to search results</a>
+
+        <!-- Two column layout: main profile + info panel -->
+        <div class="profile-layout">
+
+          <!-- LEFT / MAIN COLUMN -->
+          <div class="profile-main">
+
+            <!-- Header card: cover + logo + info -->
+            <section class="card header-card">
+              <div class="cover-image">
+                <img src="VendHub_images/factory image 4.jpg" alt="ABC Foods Factory facility" />
+              </div>
+
+              <div class="header-body">
+                <span class="profile-logo" aria-hidden="true">ABC<br />FOODS</span>
+
+                <div class="header-info">
+                  <div class="header-title-row">
+                    <h1>ABC Foods Factory</h1>
+                    <span class="verified-pill">✓ Verified Factory</span>
+                  </div>
+
+                  <div class="header-meta">
+                    <span class="meta-rating">★ 4.8 <span class="muted">(124 reviews)</span></span>
+                    <span class="meta-sep">·</span>
+                    <span class="muted"><span aria-hidden="true">📍</span> Lagos, Nigeria</span>
+                    <span class="meta-sep">·</span>
+                    <span class="muted">Joined Jan 2023</span>
+                  </div>
+
+                  <p class="header-desc">Industrial food production facility with modern equipment and strict quality control standards.</p>
+
+                  <div class="cert-tags">
+                    <span class="tag">Food &amp; Beverages</span>
+                    <span class="tag">HACCP Certified</span>
+                    <span class="tag">ISO 22000</span>
+                    <span class="tag">NAFDAC Approved</span>
+                    <span class="tag-more">+2 more</span>
+                  </div>
+                </div>
+
+                <div class="header-actions">
+                  <button class="btn btn-outline btn-icon-text"><span aria-hidden="true">⤴</span> Share</button>
+                  <button class="btn btn-outline btn-icon-text"><span aria-hidden="true">♡</span> Save</button>
+                </div>
+              </div>
+            </section>
+
+            <!-- Tabs -->
+            <nav class="profile-tabs" aria-label="Factory profile sections">
+              <button class="ptab ptab-active">Overview</button>
+              <button class="ptab">Equipment <span class="ptab-count">(12)</span></button>
+              <button class="ptab">Certifications</button>
+              <button class="ptab">Reviews <span class="ptab-count">(124)</span></button>
+              <button class="ptab">Capacity &amp; Facilities</button>
+              <button class="ptab">Policies</button>
+              <button class="ptab">Location</button>
+            </nav>
+
+            <!-- About Factory -->
+            <section class="card">
+              <h2 class="section-title">About Factory</h2>
+              <p class="about-text">ABC Foods Factory is a leading food production facility in Nigeria. We specialize in baked goods, beverages and packaged food production. Our facility is equipped with advanced machinery and operated by experienced professionals to ensure top quality and timely delivery.</p>
+
+              <div class="stats-grid">
+                <div class="stat-item">
+                  <span class="stat-icon" aria-hidden="true">📅</span>
+                  <div>
+                    <strong>2018</strong>
+                    <span>Established</span>
+                  </div>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-icon" aria-hidden="true">📐</span>
+                  <div>
+                    <strong>8,500 m²</strong>
+                    <span>Factory Size</span>
+                  </div>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-icon" aria-hidden="true">👥</span>
+                  <div>
+                    <strong>120+</strong>
+                    <span>Skilled Staff</span>
+                  </div>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-icon" aria-hidden="true">🕓</span>
+                  <div>
+                    <strong>24/7</strong>
+                    <span>Operations</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Equipment Available -->
+            <section class="card">
+              <div class="card-head">
+                <h2 class="section-title">Equipment Available</h2>
+                <a href="#" class="link-arrow">View all equipment →</a>
+              </div>
+
+              <div class="equipment-scroll">
+                <article class="equipment-card">
+                  <img src="VendHub_images/industrial-oven.webp" alt="Industrial Oven" />
+                  <div class="equipment-body">
+                    <h3>Industrial Oven</h3>
+                    <span class="equipment-cap">Capacity: 5,000 units/day</span>
+                    <span class="equipment-price">From <strong>₦15,000</strong> /hour</span>
+                    <span class="badge badge-green">Available</span>
+                    <button class="btn btn-outline btn-block">View Details</button>
+                  </div>
+                </article>
+
+                <article class="equipment-card">
+                  <img src="VendHub_images/Dough Mixer.jpeg" alt="Dough Mixer" />
+                  <div class="equipment-body">
+                    <h3>Dough Mixer</h3>
+                    <span class="equipment-cap">Capacity: 2,000 kg/batch</span>
+                    <span class="equipment-price">From <strong>₦10,000</strong> /hour</span>
+                    <span class="badge badge-green">Available</span>
+                    <button class="btn btn-outline btn-block">View Details</button>
+                  </div>
+                </article>
+
+                <article class="equipment-card">
+                  <img src="VendHub_images/Packaging Machine.jpg" alt="Packaging Machine" />
+                  <div class="equipment-body">
+                    <h3>Packaging Machine</h3>
+                    <span class="equipment-cap">Capacity: 3,000 packs/day</span>
+                    <span class="equipment-price">From <strong>₦12,000</strong> /hour</span>
+                    <span class="badge badge-green">Available</span>
+                    <button class="btn btn-outline btn-block">View Details</button>
+                  </div>
+                </article>
+
+                <article class="equipment-card">
+                  <img src="VendHub_images/Slicer Machine.jpeg" alt="Slicer Machine" />
+                  <div class="equipment-body">
+                    <h3>Slicer Machine</h3>
+                    <span class="equipment-cap">Capacity: 1,200 units/hour</span>
+                    <span class="equipment-price">From <strong>₦8,000</strong> /hour</span>
+                    <span class="badge badge-green">Available</span>
+                    <button class="btn btn-outline btn-block">View Details</button>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <!-- Reviews -->
+            <section class="card">
+              <div class="card-head">
+                <h2 class="section-title">What Our Clients Say</h2>
+                <a href="#" class="link-arrow">View all reviews →</a>
+              </div>
+
+              <div class="reviews-grid">
+                <article class="review-card">
+                  <div class="review-top">
+                    <img class="review-avatar" src="VendHub_svg/profile photo.jpeg" alt="" />
+                    <div>
+                      <span class="review-name">Bosun Bassey</span>
+                      <span class="review-stars">★★★★★</span>
+                    </div>
+                  </div>
+                  <p class="review-text">Excellent quality and turnaround time. ABC Foods Factory delivered exactly what we needed, right on schedule.</p>
+                  <span class="review-date">May 12, 2024</span>
+                </article>
+
+                <article class="review-card">
+                  <div class="review-top">
+                    <img class="review-avatar" src="https://i.pravatar.cc/64?img=47" alt="" />
+                    <div>
+                      <span class="review-name">Beatta Okoro</span>
+                      <span class="review-stars">★★★★★</span>
+                    </div>
+                  </div>
+                  <p class="review-text">Great communication throughout the process. The team was responsive and professional from start to finish.</p>
+                  <span class="review-date">May 8, 2024</span>
+                </article>
+
+                <article class="review-card">
+                  <div class="review-top">
+                    <img class="review-avatar" src="https://i.pravatar.cc/64?img=51" alt="" />
+                    <div>
+                      <span class="review-name">Damola Gibson</span>
+                      <span class="review-stars">★★★★☆</span>
+                    </div>
+                  </div>
+                  <p class="review-text">Reliable factory with modern equipment. Would definitely work with them again for future orders.</p>
+                  <span class="review-date">Apr 29, 2024</span>
+                </article>
+              </div>
+            </section>
+          </div>
+
+          <!-- RIGHT / INFO PANEL -->
+          <aside class="profile-aside">
+
+            <!-- Request Production -->
+            <section class="card cta-card">
+              <h2 class="section-title">Request Production</h2>
+              <p class="cta-desc">Send your production requirements and get a custom quote from this factory.</p>
+              <button class="btn btn-primary btn-block">Request Production</button>
+              <button class="btn btn-outline btn-block">Send Message</button>
+            </section>
+
+            <!-- Factory Highlights -->
+            <section class="card">
+              <h2 class="section-title">Factory Highlights</h2>
+              <ul class="summary-list">
+                <li><span>Minimum Order Quantity</span><strong>5,000 units</strong></li>
+                <li><span>Lead Time</span><strong>2 – 7 days</strong></li>
+                <li><span>Payment Terms</span><strong>50% Advance</strong></li>
+                <li><span>Operating Days</span><strong>Mon – Sun</strong></li>
+                <li><span>Working Hours</span><strong>24 Hours</strong></li>
+                <li><span>Capacity</span><strong>High</strong></li>
+              </ul>
+            </section>
+
+            <!-- Contact Information -->
+            <section class="card">
+              <h2 class="section-title">Contact Information</h2>
+              <ul class="contact-list">
+                <li><span class="contact-icon" aria-hidden="true">📞</span> +234 801 234 5678</li>
+                <li><span class="contact-icon" aria-hidden="true">✉️</span> info@abcfoods.ng</li>
+                <li><span class="contact-icon" aria-hidden="true">🌐</span> www.abcfoods.ng</li>
+                <li><span class="contact-icon" aria-hidden="true">📍</span> 12 Industrial Way, Agege Industrial Estate, Lagos, Nigeria</li>
+              </ul>
+            </section>
+
+            <!-- Location Map -->
+            <section class="card map-card">
+              <div class="map-placeholder" role="img" aria-label="Map showing factory location in Lagos, Nigeria">
+                <span class="map-pin" aria-hidden="true">📍</span>
+              </div>
+            </section>
+          </aside>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    // Sidebar toggle (mobile)
+    const sidebar = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const sidebarClose = document.getElementById('sidebarClose');
+
+    function openSidebar(){ sidebar.classList.add('open'); sidebarOverlay.classList.add('show'); }
+    function closeSidebar(){ sidebar.classList.remove('open'); sidebarOverlay.classList.remove('show'); }
+    sidebarToggle.addEventListener('click', openSidebar);
+    sidebarClose.addEventListener('click', closeSidebar);
+    sidebarOverlay.addEventListener('click', closeSidebar);
+
+    // Profile tabs
+    document.querySelectorAll('.ptab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelector('.ptab-active').classList.remove('ptab-active');
+        tab.classList.add('ptab-active');
+      });
+    });
+  </script>
+</body>
+</html>

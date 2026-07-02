@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VendHub | Profile / Settings</title>
+<link rel="stylesheet" href="settings.css" />
+</head>
+<body>
+
+  <!-- Mobile sidebar overlay -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="app-shell">
+
+    <!-- ============ SIDEBAR ============ -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <!-- Logo -->
+        <a class="logo" href="./">
+          <img src="VendHub_logos/VendHub logo.png" alt="VendHub logo" />
+        </a>
+        <button class="icon-btn sidebar-close" id="sidebarClose" aria-label="Close menu">✕</button>
+      </div>
+
+      <a href="settings.html">
+      <button class="user-card" type="button">
+        <img class="avatar" src="VendHub_svg/avatar.jpeg" alt="" />
+        <span class="user-meta">
+          <span class="user-name">Tosin Adeyemi</span>
+          <span class="user-role">Producer / Brand</span>
+        </span>
+        <span class="chev" aria-hidden="true">⌄</span>
+      </button> </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-item" href="dashboard.html">
+          <span class="nav-icon" aria-hidden="true">▦</span> Dashboard
+        </a>
+        <a class="nav-item" href="find_factories.html">
+          <span class="nav-icon" aria-hidden="true">⌕</span> Find Factories
+        </a>
+        <a class="nav-item" href="my_requests.html">
+          <span class="nav-icon" aria-hidden="true">▤</span> My Requests
+          <span class="nav-badge">2</span>
+        </a>
+        <a class="nav-item" href="bookings.html">
+          <span class="nav-icon" aria-hidden="true">▥</span> Bookings
+        </a>
+        <a class="nav-item" href="production_tracking.html">
+          <span class="nav-icon" aria-hidden="true">⟢</span> Production Tracking
+        </a>
+        <a class="nav-item" href="messages.html">
+          <span class="nav-icon" aria-hidden="true">✉</span> Messages
+          <span class="nav-badge">8</span>
+        </a>
+        <a class="nav-item" href="payments.html">
+          <span class="nav-icon" aria-hidden="true">₦</span> Payments
+        </a>
+        <a class="nav-item" href="#">
+          <span class="nav-icon" aria-hidden="true">★</span> Favorites
+        </a>
+        <a class="nav-item" href="factory_profile.html">
+          <span class="nav-icon" aria-hidden="true">✎</span> Reviews
+        </a>
+        <a class="nav-item" href="#">
+          <span class="nav-icon" aria-hidden="true">▢</span> Documents
+        </a>
+        <a class="nav-item active" href="settings.html">
+          <span class="nav-icon" aria-hidden="true">⚙</span> Settings
+        </a>
+      </nav>
+
+      <div class="sidebar-cards">
+        <div class="promo-card">
+          <span class="promo-icon" aria-hidden="true">🎯</span>
+          <h4>Get the most out of VendHub</h4>
+          <p>Complete your profile and preferences to get better matches.</p>
+          <div class="mini-progress">
+            <div class="mini-progress-track"><div class="mini-progress-fill" style="width:80%"></div></div>
+            <span class="mini-progress-label">80% Complete</span>
+          </div>
+          <button class="btn btn-outline btn-block" type="button">Complete Profile</button>
+        </div>
+
+        <div class="help-card">
+          <span class="help-icon" aria-hidden="true">🎧</span>
+          <h4>Need Help?</h4>
+          <p>Our support team is here to assist you.</p>
+          <a href="#" class="help-link">Contact Support →</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ============ MAIN ============ -->
+    <div class="main">
+
+      <!-- Topbar -->
+      <header class="topbar">
+        <button class="icon-btn sidebar-toggle" id="sidebarToggle" aria-label="Open menu">☰</button>
+
+        <div class="search-bar">
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input type="search" placeholder="Search for factories, equipment or services..." aria-label="Search" />
+        </div>
+
+        <div class="topbar-actions">
+          <button class="icon-btn" aria-label="Messages">
+            <span aria-hidden="true">💬</span>
+            <span class="dot dot-purple">3</span>
+          </button>
+          <button class="icon-btn" aria-label="Notifications">
+            <span aria-hidden="true">🔔</span>
+            <span class="dot dot-red">6</span>
+          </button>
+          <button class="btn btn-primary">
+            <span aria-hidden="true">＋</span> Post a Request
+          </button>
+        </div>
+      </header>
+
+      <!-- Content -->
+      <main class="content">
+
+        <!-- Page heading -->
+        <section class="page-head">
+          <h1>Profile / Settings</h1>
+          <p>Manage your personal information, preferences and account settings.</p>
+        </section>
+
+        <!-- Settings tabs -->
+        <nav class="settings-tabs" aria-label="Settings sections">
+          <button class="stab stab-active">Profile</button>
+          <button class="stab">Account</button>
+          <button class="stab">Preferences</button>
+          <button class="stab">Notifications</button>
+          <button class="stab">Security</button>
+          <button class="stab">Payment Methods</button>
+        </nav>
+
+        <!-- Two column layout: settings form + info panel -->
+        <div class="settings-layout">
+
+          <!-- LEFT / MAIN COLUMN -->
+          <div class="settings-main">
+
+            <!-- Profile Information -->
+            <section class="card">
+              <h2 class="section-title">Profile Information</h2>
+
+              <div class="profile-photo-row">
+                <div class="photo-wrap">
+                  <img class="profile-photo" src="VendHub_svg/avatar.jpeg" alt="Profile photo" />
+                  <button class="photo-edit-btn" aria-label="Edit profile photo">📷</button>
+                </div>
+                <span class="photo-hint">JPG, PNG or GIF. Max size 2MB.</span>
+              </div>
+
+              <form class="settings-form">
+                <div class="form-row form-row-2">
+                  <div class="field">
+                    <label for="fullName">Full Name</label>
+                    <input id="fullName" type="text" value="Tosin Adeyemi" />
+                  </div>
+                  <div class="field">
+                    <label for="email">Email Address</label>
+                    <div class="input-with-badge">
+                      <input id="email" type="email" value="tosin.adeyemi@greenfield.com" />
+                      <span class="verified-pill">✓ Verified</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-row form-row-2">
+                  <div class="field">
+                    <label for="phone">Phone Number</label>
+                    <div class="phone-field">
+                      <span class="phone-flag">🇳🇬 ▾</span>
+                      <input id="phone" type="text" value="+234 801 234 5678" />
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label for="title">Title / Position</label>
+                    <input id="title" type="text" value="Founder &amp; CEO" />
+                  </div>
+                </div>
+
+                <div class="form-row form-row-2">
+                  <div class="field">
+                    <label for="company">Company / Brand Name</label>
+                    <input id="company" type="text" value="Greenfield Foods" />
+                  </div>
+                  <div class="field">
+                    <label for="website">Website</label>
+                    <input id="website" type="text" value="https://greenfieldfoods.com" />
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label for="about">About Your Business</label>
+                  <textarea id="about" maxlength="500">We produce healthy, high-quality snacks made from locally sourced ingredients. Our mission is to make nutritious food accessible and delicious.</textarea>
+                  <span class="char-count">145/500</span>
+                </div>
+              </form>
+            </section>
+
+            <!-- Business Details -->
+            <section class="card">
+              <h2 class="section-title">Business Details</h2>
+
+              <div class="form-row form-row-3">
+                <div class="field">
+                  <label for="industry">Industry</label>
+                  <select id="industry">
+                    <option>Food &amp; Beverages</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="bizType">Business Type</label>
+                  <select id="bizType">
+                    <option>Manufacturer</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="bizSize">Business Size</label>
+                  <select id="bizSize">
+                    <option>11 – 50 employees</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row form-row-3">
+                <div class="field">
+                  <label for="country">Registered Country</label>
+                  <select id="country">
+                    <option>🇳🇬 Nigeria</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="city">City</label>
+                  <input id="city" type="text" value="Lagos" />
+                </div>
+                <div class="field">
+                  <label for="address">Business Address</label>
+                  <input id="address" type="text" value="12 Industrial Way, Agege Industrial Estate, Lagos, Nigeria" />
+                </div>
+              </div>
+            </section>
+
+            <!-- Social Links -->
+            <section class="card">
+              <h2 class="section-title">Social Links</h2>
+
+              <div class="form-row form-row-2">
+                <div class="field">
+                  <label for="linkedin">LinkedIn</label>
+                  <div class="input-with-icon">
+                    <span class="social-icon" aria-hidden="true">in</span>
+                    <input id="linkedin" type="text" value="https://linkedin.com/company/greenfieldfoods" />
+                  </div>
+                </div>
+                <div class="field">
+                  <label for="facebook">Facebook</label>
+                  <div class="input-with-icon">
+                    <span class="social-icon" aria-hidden="true">f</span>
+                    <input id="facebook" type="text" value="https://facebook.com/greenfieldfoods" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-row form-row-2">
+                <div class="field">
+                  <label for="instagram">Instagram</label>
+                  <div class="input-with-icon">
+                    <span class="social-icon" aria-hidden="true">◎</span>
+                    <input id="instagram" type="text" value="https://instagram.com/greenfieldfoods" />
+                  </div>
+                </div>
+                <div class="field">
+                  <label for="twitter">Twitter / X</label>
+                  <div class="input-with-icon">
+                    <span class="social-icon" aria-hidden="true">✕</span>
+                    <input id="twitter" type="text" value="https://twitter.com/greenfieldfoods" />
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Form actions -->
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Save Changes</button>
+            </div>
+          </div>
+
+          <!-- RIGHT / INFO PANEL -->
+          <aside class="settings-aside">
+
+            <!-- Profile Completion -->
+            <section class="card">
+              <h2 class="section-title">Profile Completion</h2>
+
+              <div class="completion-row">
+                <div class="completion-ring" aria-hidden="true">
+                  <svg viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="42" fill="none" stroke="#E9E7F7" stroke-width="10"></circle>
+                    <circle cx="50" cy="50" r="42" fill="none" stroke="#5B4FE9" stroke-width="10"
+                      stroke-dasharray="211.2 263.9" stroke-linecap="round" transform="rotate(-90 50 50)"></circle>
+                  </svg>
+                  <span class="completion-pct">80%</span>
+                </div>
+                <div class="completion-text">
+                  <span class="completion-title">Your profile is looking good!</span>
+                  <p>Complete all sections to increase your visibility and get better factory matches.</p>
+                </div>
+              </div>
+
+              <ul class="checklist">
+                <li class="check-done"><span aria-hidden="true">✓</span> Basic Information</li>
+                <li class="check-done"><span aria-hidden="true">✓</span> Business Details</li>
+                <li class="check-done"><span aria-hidden="true">✓</span> Profile Photo</li>
+                <li class="check-done"><span aria-hidden="true">✓</span> About Your Business</li>
+                <li class="check-done"><span aria-hidden="true">✓</span> Social Links</li>
+                <li class="check-pending"><span aria-hidden="true">○</span> Payment Method</li>
+              </ul>
+
+              <button class="btn btn-outline btn-block">Complete Profile</button>
+            </section>
+
+            <!-- Quick Links -->
+            <section class="card">
+              <h2 class="section-title">Quick Links</h2>
+              <ul class="quick-links">
+                <li>
+                  <a href="#">
+                    <span class="ql-icon" aria-hidden="true">🔒</span>
+                    <span>Change Password</span>
+                    <span class="ql-arrow" aria-hidden="true">›</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="ql-icon" aria-hidden="true">💳</span>
+                    <span>Manage Payment Methods</span>
+                    <span class="ql-arrow" aria-hidden="true">›</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="ql-icon" aria-hidden="true">🔔</span>
+                    <span>Notification Settings</span>
+                    <span class="ql-arrow" aria-hidden="true">›</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="ql-icon" aria-hidden="true">🛡️</span>
+                    <span>Privacy Settings</span>
+                    <span class="ql-arrow" aria-hidden="true">›</span>
+                  </a>
+                </li>
+              </ul>
+            </section>
+
+            <!-- Delete Account -->
+            <section class="card delete-card">
+              <div class="delete-head">
+                <span class="delete-icon" aria-hidden="true">⚠️</span>
+                <span class="delete-title">Delete Account</span>
+              </div>
+              <p class="delete-desc">Permanently delete your account and all associated data.</p>
+              <button class="btn btn-danger btn-block">Delete My Account</button>
+            </section>
+          </aside>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    // Sidebar toggle (mobile)
+    const sidebar = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const sidebarClose = document.getElementById('sidebarClose');
+
+    function openSidebar(){ sidebar.classList.add('open'); sidebarOverlay.classList.add('show'); }
+    function closeSidebar(){ sidebar.classList.remove('open'); sidebarOverlay.classList.remove('show'); }
+    sidebarToggle.addEventListener('click', openSidebar);
+    sidebarClose.addEventListener('click', closeSidebar);
+    sidebarOverlay.addEventListener('click', closeSidebar);
+
+    // Settings tabs
+    document.querySelectorAll('.stab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelector('.stab-active').classList.remove('stab-active');
+        tab.classList.add('stab-active');
+      });
+    });
+
+    // Character counter for About Your Business
+    const aboutField = document.getElementById('about');
+    const charCount = document.querySelector('.char-count');
+    aboutField.addEventListener('input', () => {
+      charCount.textContent = `${aboutField.value.length}/500`;
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VendHub | My Requests</title>
+<link rel="stylesheet" href="my_requests.css" />
+</head>
+<body>
+
+  <!-- Mobile sidebar overlay -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <!-- Mobile analytics overlay (right panel) -->
+  <div class="analytics-overlay" id="analyticsOverlay"></div>
+
+  <div class="app-shell">
+
+    <!-- ============ SIDEBAR ============ -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <a class="logo" href="./">
+          <img src="VendHub_logos/VendHub logo.png" alt="VendHub logo" />
+        </a>
+        <button class="icon-btn sidebar-close" id="sidebarClose" aria-label="Close menu">✕</button>
+      </div>
+
+      <a href="settings.html">
+      <button class="user-card" type="button">
+        <img class="avatar" src="VendHub_svg/avatar.jpeg" alt="" />
+        <span class="user-meta">
+          <span class="user-name">Tosin Adeyemi</span>
+          <span class="user-role">Producer / Brand</span>
+        </span>
+        <span class="chev" aria-hidden="true">⌄</span>
+      </button> </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-item" href="dashboard.html">
+          <span class="nav-icon" aria-hidden="true">▦</span> Dashboard
+        </a>
+        <a class="nav-item" href="find_factories.html">
+          <span class="nav-icon" aria-hidden="true">⌕</span> Find Factories
+        </a>
+        <a class="nav-item active" href="my_requests.html">
+          <span class="nav-icon" aria-hidden="true">▤</span> My Requests
+          <span class="nav-badge">2</span>
+        </a>
+        <a class="nav-item" href="bookings.html">
+          <span class="nav-icon" aria-hidden="true">▥</span> Bookings
+        </a>
+        <a class="nav-item" href="production_tracking.html">
+          <span class="nav-icon" aria-hidden="true">⟢</span> Production Tracking
+        </a>
+        <a class="nav-item" href="messages.html">
+          <span class="nav-icon" aria-hidden="true">✉</span> Messages
+          <span class="nav-badge">8</span>
+        </a>
+        <a class="nav-item" href="payments.html">
+          <span class="nav-icon" aria-hidden="true">₦</span> Payments
+        </a>
+        <a class="nav-item" href="#">
+          <span class="nav-icon" aria-hidden="true">★</span> Favorites
+        </a>
+        <a class="nav-item" href="factory_profile.html">
+          <span class="nav-icon" aria-hidden="true">✎</span> Reviews
+        </a>
+        <a class="nav-item" href="#">
+          <span class="nav-icon" aria-hidden="true">▢</span> Documents
+        </a>
+        <a class="nav-item" href="#">
+          <span class="nav-icon" aria-hidden="true">⚙</span> Settings
+        </a>
+      </nav>
+
+      <div class="sidebar-cards">
+        <div class="promo-card">
+          <span class="promo-icon" aria-hidden="true">📋</span>
+          <h4>Need help with your request?</h4>
+          <p>Our support team is here to help you get the right factory.</p>
+          <button class="btn btn-outline btn-block" type="button">Contact Support</button>
+        </div>
+
+        <div class="help-card">
+          <span class="help-icon" aria-hidden="true">🎧</span>
+          <h4>How it works</h4>
+          <p>Learn how requests work and how we connect you with verified factories.</p>
+          <a href="#" class="help-link">View Guide →</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ============ MAIN ============ -->
+    <div class="main">
+
+      <!-- Topbar -->
+      <header class="topbar">
+        <button class="icon-btn sidebar-toggle" id="sidebarToggle" aria-label="Open menu">☰</button>
+
+        <div class="search-bar">
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input type="search" placeholder="Search for factories, equipment or services..." aria-label="Search" />
+        </div>
+
+        <div class="topbar-actions">
+          <button class="icon-btn" aria-label="Messages">
+            <span aria-hidden="true">💬</span>
+            <span class="dot dot-purple">3</span>
+          </button>
+          <button class="icon-btn" aria-label="Notifications">
+            <span aria-hidden="true">🔔</span>
+            <span class="dot dot-red">6</span>
+          </button>
+          <button class="btn btn-primary">
+            <span aria-hidden="true">＋</span> Post a Request
+          </button>
+        </div>
+      </header>
+
+      <!-- Content -->
+      <main class="content">
+
+        <div class="requests-layout">
+          <div class="requests-main">
+            <!-- Page heading -->
+            <section class="page-head">
+              <div>
+                <h1>My Requests</h1>
+                <p>Track and manage all your production requests in one place.</p>
+              </div>
+              <button class="btn btn-primary btn-mobile-analytics" id="mobileAnalyticsBtn">
+                <span aria-hidden="true">📊</span> Overview
+              </button>
+            </section>
+
+            <!-- Stat cards -->
+            <section class="stats-grid" aria-label="Request statistics">
+          <div class="stat-card">
+            <div class="stat-icon stat-icon-purple" aria-hidden="true">▤</div>
+            <div class="stat-body">
+              <span class="stat-label">Total Requests</span>
+              <span class="stat-value">24</span>
+              <a href="#" class="stat-link">View all</a>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon stat-icon-amber" aria-hidden="true">⏱</div>
+            <div class="stat-body">
+              <span class="stat-label">Pending</span>
+              <span class="stat-value">6</span>
+              <a href="#" class="stat-link">View all</a>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon stat-icon-blue" aria-hidden="true">▤</div>
+            <div class="stat-body">
+              <span class="stat-label">Quotes Received</span>
+              <span class="stat-value">10</span>
+              <a href="#" class="stat-link">View all</a>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon stat-icon-green" aria-hidden="true">⟢</div>
+            <div class="stat-body">
+              <span class="stat-label">In Production</span>
+              <span class="stat-value">4</span>
+              <a href="#" class="stat-link">View all</a>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon stat-icon-teal" aria-hidden="true">✓</div>
+            <div class="stat-body">
+              <span class="stat-label">Completed</span>
+              <span class="stat-value">4</span>
+              <a href="#" class="stat-link">View all</a>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon stat-icon-red" aria-hidden="true">✕</div>
+            <div class="stat-body">
+              <span class="stat-label">Cancelled</span>
+              <span class="stat-value">2</span>
+              <a href="#" class="stat-link">View all</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Table and sidebar layout -->
+          <div class="requests-panel">
+
+            <!-- Tabs -->
+            <div class="tabs" role="tablist" aria-label="Request status tabs">
+              <button class="tab tab-active" role="tab" aria-selected="true">All Requests</button>
+              <button class="tab" role="tab" aria-selected="false">Pending</button>
+              <button class="tab" role="tab" aria-selected="false">Quotes Received</button>
+              <button class="tab" role="tab" aria-selected="false">In Production</button>
+              <button class="tab" role="tab" aria-selected="false">Completed</button>
+              <button class="tab" role="tab" aria-selected="false">Cancelled</button>
+            </div>
+
+            <!-- Filters -->
+            <div class="filters-row">
+              <div class="input-with-icon search-input">
+                <input type="text" placeholder="Search requests..." aria-label="Search requests" />
+                <span class="field-icon" aria-hidden="true">⌕</span>
+              </div>
+              <select aria-label="Status">
+                <option>Status</option>
+              </select>
+              <select aria-label="Category">
+                <option>Category</option>
+              </select>
+              <button class="filter-chip">
+                <span aria-hidden="true">📅</span> Date Range
+              </button>
+              <button class="filter-chip filter-chip-ghost">
+                <span aria-hidden="true">▤</span> More Filters
+              </button>
+            </div>
+
+            <!-- Table -->
+            <div class="table-scroll">
+              <table class="requests-table">
+                <thead>
+                  <tr>
+                    <th>Request Details</th>
+                    <th>Category</th>
+                    <th>Quantity</th>
+                    <th>Status</th>
+                    <th>Quotes</th>
+                    <th>Last Updated</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="req-cell">
+                        <img class="thumb" src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=100&h=100&fit=crop" alt="" />
+                        <div class="req-info">
+                          <span class="req-title">Bread Production</span>
+                          <span class="req-sub">REQ-2405-001</span>
+                          <span class="req-date">May 24, 2024</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td><span class="cat-cell"><span class="cat-icon" aria-hidden="true">🍞</span> Food &amp; Beverages</span></td>
+                    <td><strong>20,000</strong><span class="unit">units</span></td>
+                    <td><span class="badge badge-amber">Pending</span></td>
+                    <td class="quotes-cell">0</td>
+                    <td>
+                      <span class="updated-date">May 24, 2024</span>
+                      <span class="updated-time">10:30 AM</span>
+                    </td>
+                    <td>
+                      <div class="actions-cell">
+                        <button class="btn btn-outline btn-sm">View Details</button>
+                        <button class="icon-btn icon-btn-sm" aria-label="More options">⋮</button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="req-cell">
+                        <img class="thumb" src="https://images.unsplash.com/photo-1600718374662-0483d2b9da44?w=100&h=100&fit=crop" alt="" />
+                        <div class="req-info">
+                          <span class="req-title">Juice Bottles</span>
+                          <span class="req-sub">REQ-2405-002</span>
+                          <span class="req-date">May 23, 2024</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td><span class="cat-cell"><span class="cat-icon" aria-hidden="true">🧃</span> Beverages</span></td>
+                    <td><strong>10,000</strong><span class="unit">units</span></td>
+                    <td><span class="badge badge-blue">Quotes Received</span></td>
+                    <td class="quotes-cell">3</td>
+                    <td>
+                      <span class="updated-date">May 23, 2024</span>
+                      <span class="updated-time">02:15 PM</span>
+                    </td>
+                    <td>
+                      <div class="actions-cell">
+                        <button class="btn btn-outline btn-sm">View Details</button>
+                        <button class="icon-btn icon-btn-sm" aria-label="More options">⋮</button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="req-cell">
+                        <img class="thumb" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=100&h=100&fit=crop" alt="" />
+                        <div class="req-info">
+                          <span class="req-title">Snack Packaging</span>
+                          <span class="req-sub">REQ-2405-003</span>
+                          <span class="req-date">May 20, 2024</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td><span class="cat-cell"><span class="cat-icon" aria-hidden="true">📦</span> Packaging</span></td>
+                    <td><strong>5,000</strong><span class="unit">packs</span></td>
+                    <td><span class="badge badge-violet">In Production</span></td>
+                    <td class="quotes-cell">1</td>
+                    <td>
+                      <span class="updated-date">May 22, 2024</span>
+                      <span class="updated-time">09:45 AM</span>
+                    </td>
+                    <td>
+                      <div class="actions-cell">
+                        <button class="btn btn-outline btn-sm">View Details</button>
+                        <button class="icon-btn icon-btn-sm" aria-label="More options">⋮</button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="req-cell">
+                        <img class="thumb" src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=100&h=100&fit=crop" alt="" />
+                        <div class="req-info">
+                          <span class="req-title">Cookie Production</span>
+                          <span class="req-sub">REQ-2405-004</span>
+                          <span class="req-date">May 18, 2024</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td><span class="cat-cell"><span class="cat-icon" aria-hidden="true">🍪</span> Food &amp; Beverages</span></td>
+                    <td><strong>15,000</strong><span class="unit">units</span></td>
+                    <td><span class="badge badge-green">Completed</span></td>
+                    <td class="quotes-cell">2</td>
+                    <td>
+                      <span class="updated-date">May 21, 2024</span>
+                      <span class="updated-time">11:20 AM</span>
+                    </td>
+                    <td>
+                      <div class="actions-cell">
+                        <button class="btn btn-outline btn-sm">View Details</button>
+                        <button class="icon-btn icon-btn-sm" aria-label="More options">⋮</button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="req-cell">
+                        <img class="thumb" src="https://images.unsplash.com/photo-1556760544-74068565f05c?w=100&h=100&fit=crop" alt="" />
+                        <div class="req-info">
+                          <span class="req-title">Cosmetic Cream</span>
+                          <span class="req-sub">REQ-2405-005</span>
+                          <span class="req-date">May 15, 2024</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td><span class="cat-cell"><span class="cat-icon" aria-hidden="true">🧴</span> Cosmetics</span></td>
+                    <td><strong>2,000</strong><span class="unit">units</span></td>
+                    <td><span class="badge badge-red">Cancelled</span></td>
+                    <td class="quotes-cell">0</td>
+                    <td>
+                      <span class="updated-date">May 17, 2024</span>
+                      <span class="updated-time">04:10 PM</span>
+                    </td>
+                    <td>
+                      <div class="actions-cell">
+                        <button class="btn btn-outline btn-sm">View Details</button>
+                        <button class="icon-btn icon-btn-sm" aria-label="More options">⋮</button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="req-cell">
+                        <img class="thumb" src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=100&h=100&fit=crop" alt="" />
+                        <div class="req-info">
+                          <span class="req-title">Water Bottles</span>
+                          <span class="req-sub">REQ-2405-006</span>
+                          <span class="req-date">May 10, 2024</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td><span class="cat-cell"><span class="cat-icon" aria-hidden="true">💧</span> Beverages</span></td>
+                    <td><strong>30,000</strong><span class="unit">units</span></td>
+                    <td><span class="badge badge-blue">Quotes Received</span></td>
+                    <td class="quotes-cell">2</td>
+                    <td>
+                      <span class="updated-date">May 16, 2024</span>
+                      <span class="updated-time">01:05 PM</span>
+                    </td>
+                    <td>
+                      <div class="actions-cell">
+                        <button class="btn btn-outline btn-sm">View Details</button>
+                        <button class="icon-btn icon-btn-sm" aria-label="More options">⋮</button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Pagination -->
+            <nav class="pagination" aria-label="Pagination">
+              <button class="page-btn" aria-label="Previous page">‹</button>
+              <button class="page-btn page-btn-active">1</button>
+              <button class="page-btn">2</button>
+              <button class="page-btn">3</button>
+              <span class="page-ellipsis">…</span>
+              <button class="page-btn">5</button>
+              <button class="page-btn" aria-label="Next page">›</button>
+            </nav>
+          </div>
+        </div>
+          <aside class="requests-aside">
+            <div class="analytics-panel" id="analyticsPanel">
+              <div class="analytics-head">
+                <button class="icon-btn analytics-close" id="analyticsClose" aria-label="Close overview">✕</button>
+              </div>
+
+              <!-- Request Overview -->
+              <section class="card">
+                <h2>Request Overview</h2>
+
+              <div class="donut-wrap-center">
+                <svg viewBox="0 0 120 120" class="donut" aria-hidden="true">
+                  <circle cx="60" cy="60" r="48" fill="none" stroke="#E9E7F7" stroke-width="18"></circle>
+                  <!-- Pending 25% -->
+                  <circle cx="60" cy="60" r="48" fill="none" stroke="#F5A623" stroke-width="18"
+                    stroke-dasharray="75.4 226.2" stroke-dashoffset="0" stroke-linecap="round"></circle>
+                  <!-- Quotes Received 41% -->
+                  <circle cx="60" cy="60" r="48" fill="none" stroke="#5B4FE9" stroke-width="18"
+                    stroke-dasharray="123.6 177.9" stroke-dashoffset="-75.4" stroke-linecap="round"></circle>
+                  <!-- In Production 17% -->
+                  <circle cx="60" cy="60" r="48" fill="none" stroke="#9B59E0" stroke-width="18"
+                    stroke-dasharray="51.3 250.3" stroke-dashoffset="-199" stroke-linecap="round"></circle>
+                  <!-- Completed 17% -->
+                  <circle cx="60" cy="60" r="48" fill="none" stroke="#2BB673" stroke-width="18"
+                    stroke-dasharray="51.3 250.3" stroke-dashoffset="-250.3" stroke-linecap="round"></circle>
+                  <!-- Cancelled 8% -->
+                  <circle cx="60" cy="60" r="48" fill="none" stroke="#EF4444" stroke-width="18"
+                    stroke-dasharray="24.1 277.4" stroke-dashoffset="-301.6" stroke-linecap="round"></circle>
+                </svg>
+              </div>
+
+              <ul class="legend">
+                <li><span class="dot-legend" style="background:#F5A623"></span>Pending <span class="legend-count">6 (25%)</span></li>
+                <li><span class="dot-legend" style="background:#5B4FE9"></span>Quotes Received <span class="legend-count">10 (41%)</span></li>
+                <li><span class="dot-legend" style="background:#9B59E0"></span>In Production <span class="legend-count">4 (17%)</span></li>
+                <li><span class="dot-legend" style="background:#2BB673"></span>Completed <span class="legend-count">4 (17%)</span></li>
+                <li><span class="dot-legend" style="background:#EF4444"></span>Cancelled <span class="legend-count">2 (8%)</span></li>
+              </ul>
+
+              <div class="total-row">
+                <span>Total Requests</span>
+                <strong>24</strong>
+              </div>
+              <a href="#" class="view-all-link">View full analytics →</a>
+            </section>
+
+            <!-- Recent Activity -->
+            <section class="card">
+              <div class="card-head">
+                <h2>Recent Activity</h2>
+              </div>
+
+              <ul class="activity-list">
+                <li class="activity-item">
+                  <span class="activity-icon activity-icon-blue" aria-hidden="true">💬</span>
+                  <div class="activity-info">
+                    <span class="activity-title">New quote received</span>
+                    <span class="activity-sub">ABC Foods Factory</span>
+                  </div>
+                  <span class="activity-time">10 minutes ago</span>
+                </li>
+                <li class="activity-item">
+                  <span class="activity-icon activity-icon-purple" aria-hidden="true">⟢</span>
+                  <div class="activity-info">
+                    <span class="activity-title">Production started</span>
+                    <span class="activity-sub">Snack Packaging</span>
+                  </div>
+                  <span class="activity-time">1 hour ago</span>
+                </li>
+                <li class="activity-item">
+                  <span class="activity-icon activity-icon-green" aria-hidden="true">✓</span>
+                  <div class="activity-info">
+                    <span class="activity-title">Request marked as completed</span>
+                    <span class="activity-sub">Cookie Production</span>
+                  </div>
+                  <span class="activity-time">Yesterday</span>
+                </li>
+                <li class="activity-item">
+                  <span class="activity-icon activity-icon-amber" aria-hidden="true">✉</span>
+                  <div class="activity-info">
+                    <span class="activity-title">New message from factory</span>
+                    <span class="activity-sub">NutriFoods Ltd</span>
+                  </div>
+                  <span class="activity-time">2 days ago</span>
+                </li>
+                <li class="activity-item">
+                  <span class="activity-icon activity-icon-amber" aria-hidden="true">✉</span>
+                  <div class="activity-info">
+                    <span class="activity-title">New message from factory</span>
+                    <span class="activity-sub">NutriFoods Ltd</span>
+                  </div>
+                  <span class="activity-time">2 days ago</span>
+                </li>
+                <li class="activity-item">
+                  <span class="activity-icon activity-icon-amber" aria-hidden="true">✉</span>
+                  <div class="activity-info">
+                    <span class="activity-title">New message from factory</span>
+                    <span class="activity-sub">NutriFoods Ltd</span>
+                  </div>
+                  <span class="activity-time">2 days ago</span>
+                </li>
+                <li class="activity-item">
+                  <span class="activity-icon activity-icon-amber" aria-hidden="true">✉</span>
+                  <div class="activity-info">
+                    <span class="activity-title">New message from factory</span>
+                    <span class="activity-sub">NutriFoods Ltd</span>
+                  </div>
+                  <span class="activity-time">2 days ago</span>
+                </li>
+                <li class="activity-item">
+                  <span class="activity-icon activity-icon-amber" aria-hidden="true">✉</span>
+                  <div class="activity-info">
+                    <span class="activity-title">New message from factory</span>
+                    <span class="activity-sub">NutriFoods Ltd</span>
+                  </div>
+                  <span class="activity-time">2 days ago</span>
+                </li>
+                <li class="activity-item">
+                  <span class="activity-icon activity-icon-amber" aria-hidden="true">✉</span>
+                  <div class="activity-info">
+                    <span class="activity-title">New message from factory</span>
+                    <span class="activity-sub">NutriFoods Ltd</span>
+                  </div>
+                  <span class="activity-time">2 days ago</span>
+                </li>
+                <li class="activity-item">
+                  <span class="activity-icon activity-icon-amber" aria-hidden="true">✉</span>
+                  <div class="activity-info">
+                    <span class="activity-title">New message from factory</span>
+                    <span class="activity-sub">NutriFoods Ltd</span>
+                  </div>
+                  <span class="activity-time">2 days ago</span>
+                </li>
+              </ul>
+
+              <a href="#" class="view-all-link">View all activity →</a>
+            </section>
+
+            <!-- CTA card -->
+            <div class="promo-card cta-card">
+              <span class="promo-icon" aria-hidden="true">📋</span>
+              <h4>Need a factory for your next request?</h4>
+              <p>Post your requirements and get matched with verified factories.</p>
+              <button class="btn btn-primary btn-block">Post a New Request</button>
+            </div>
+          </aside>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    // Sidebar toggle (mobile)
+    const sidebar = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const sidebarClose = document.getElementById('sidebarClose');
+
+    function openSidebar(){ sidebar.classList.add('open'); sidebarOverlay.classList.add('show'); }
+    function closeSidebar(){ sidebar.classList.remove('open'); sidebarOverlay.classList.remove('show'); }
+    sidebarToggle.addEventListener('click', openSidebar);
+    sidebarClose.addEventListener('click', closeSidebar);
+    sidebarOverlay.addEventListener('click', closeSidebar);
+
+    // Analytics panel toggle (mobile/tablet)
+    const analyticsPanel = document.getElementById('analyticsPanel');
+    const analyticsOverlay = document.getElementById('analyticsOverlay');
+    const mobileAnalyticsBtn = document.getElementById('mobileAnalyticsBtn');
+    const analyticsClose = document.getElementById('analyticsClose');
+
+    function openAnalytics(){ analyticsPanel.classList.add('open'); analyticsOverlay.classList.add('show'); }
+    function closeAnalytics(){ analyticsPanel.classList.remove('open'); analyticsOverlay.classList.remove('show'); }
+    mobileAnalyticsBtn.addEventListener('click', openAnalytics);
+    analyticsClose.addEventListener('click', closeAnalytics);
+    analyticsOverlay.addEventListener('click', closeAnalytics);
+
+    // Tabs interaction
+    document.querySelectorAll('.tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.tab').forEach(t => {
+          t.classList.remove('tab-active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        tab.classList.add('tab-active');
+        tab.setAttribute('aria-selected', 'true');
+      });
+    });
+  </script>
+</body>
+</html>
